@@ -1,0 +1,98 @@
+#path-phoenix-nogales path
+{
+	opacity: 0;
+	transition: opacity 0.3s;
+	//stroke-dasharray: 2500;
+  	//stroke-dashoffset: 2500;
+}
+
+.is-drawn
+{
+	stroke-dasharray: 230;
+  	stroke-dashoffset: 230;
+  	animation: dash 1.5s linear forwards;
+  	opacity: 1 !important;
+  	transition: opacity 0s;
+}
+
+.is-blue
+{
+	fill: blue !important;
+}
+
+
+
+#path-nogales-tombstone-elpaso path
+{
+	opacity: 0;
+	transition: opacity 0.3s;
+	//stroke-dasharray: 2500;
+  	//stroke-dashoffset: 2500;
+}
+
+.is-drawn2
+{
+	stroke-dasharray: 340;
+  	stroke-dashoffset: 340;
+  	animation: dash 1.5s linear forwards;
+  	opacity: 1 !important;
+  	transition: opacity 0s;
+}
+
+
+#path-elpaso-tucson-sells path
+{
+	opacity: 0;
+	transition: opacity 0.3s;
+	//stroke-dasharray: 2500;
+  	//stroke-dashoffset: 2500;
+}
+
+.is-drawn3
+{
+	stroke-dasharray: 410;
+  	stroke-dashoffset: 410;
+  	animation: dash 1.5s linear forwards;
+  	opacity: 1 !important;
+  	transition: opacity 0s;
+}
+
+#path-sells-yuma path
+{
+	opacity: 0;
+	transition: opacity 0.3s;
+	//stroke-dasharray: 2500;
+  	//stroke-dashoffset: 2500;
+}
+
+.is-drawn4
+{
+	stroke-dasharray: 240;
+  	stroke-dashoffset: 240;
+  	animation: dash 1.5s linear forwards;
+  	opacity: 1 !important;
+  	transition: opacity 0s;
+}
+
+#path-yuma-sandiego path
+{
+	opacity: 0;
+	transition: opacity 0.3s;
+	//stroke-dasharray: 2500;
+  	//stroke-dashoffset: 2500;
+}
+
+.is-drawn5
+{
+	stroke-dasharray: 175;
+  	stroke-dashoffset: 175;
+  	animation: dash 1.5s linear forwards;
+  	opacity: 1 !important;
+  	transition: opacity 0s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"title": "Voyage au coeur de la zone",
+	"description": "Trente après l’incendie du réacteur 4, le désastre n’est pas mieux géré que ne l’avait été la catastrophe elle même. A Bazar, un village contaminé et évacué en 1993, des Ukrainiens se réinstallent.",
+	"authors": "Boris Mabillard",
+	"imgSocial": "social.jpg", 
+
+	"navBarStyle": "black",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/logo-lh.svg",
+		"link": "http://www.hebdo.ch/"
+	}
+}

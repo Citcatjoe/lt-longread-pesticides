@@ -1,0 +1,15 @@
+{
+	"title": "Au pied du mur",
+	"description": "Un reportage de Valérie de Graffenried le long de la frontière entre les États-Unis et le Mexique",
+	"authors": "Valérie de Graffenried, César Greppin",
+	"imgSocial": "social.jpg", 
+
+	"navBarStyle": "black",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "http://www.letemps.ch/"
+	}
+}

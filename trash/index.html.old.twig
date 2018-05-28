@@ -1,0 +1,801 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		{{ block('head_brand') }}
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+		<!--<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'> -->		
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,900,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+
+	</head>
+	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }}
+		
+		<div class="overlay">
+			<img class="logo-lt-blanc" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div> 
+
+		<header>
+			<div class="header__gradient"></div>
+
+			<!-- <div class="video-wrapper">
+				<video loop muted>
+				  <source src="https://player.vimeo.com/external/159368454.hd.mp4?s=b4ad2a982f800f67b30d7269414cd20eaaa9f669&profile_id=119" type="video/mp4"> 
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div> -->
+
+			<div class="header__content">
+				<div class="header__content__container">
+					<div class="header__content__container__box">
+						<h1>Voyage au cœur de la zone</h1>
+						<img class="separateur" src="img/separateur.svg" alt="">
+						<h2>Un article de <span>Boris Mabillard</span></h2>	
+						<h2 class="social">
+							<a target="blank" href="https://www.facebook.com/sharer.php?u={{ app.url }}&display=popup&ref=plugin&src=share_button"><i class="fa fa-facebook"></i></a>
+							<a target="blank" href="https://twitter.com/intent/tweet?text={{ description ~ ' ' ~ app.url ~ ' '|url_encode }}&via=letemps"><i class="fa fa-twitter fa-middle"></i></a>
+							<a target="blank" href="https://www.linkedin.com/shareArticle?url={{ app.url }}&mini=true&title={{ title|url_encode }}&summary={{ description|url_encode }}&source={{ 'Le Temps'|url_encode }}"><i class="fa fa-linkedin"></i></a>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="scroll-indicator">
+				<div class="scroll-indicator-inner"></div> 
+			</div>
+		</header>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<h3>
+					Des exilés de la guerre du Donbass et des victimes de la crise économique choisissent de s’installer dans la zone II de Tchernobyl, normalement interdite en raison de la contamination. Le maire de Bazar propose des loyers à prix imbattable
+					<hr>
+				</h3>
+
+				<div class="spacer-small"></div>
+				<div class="spacer-small"></div>
+
+				<h4>
+					Boris Mabillard (Texte/photos)<br> <span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span> M. Vadimsky, Andrey Bezludniy (Caméra/montage)<br> <span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span> Tchernobyl, Ukraine 
+				</h4>
+
+				<p>
+					Bienvenue à Tchernobyl. Trente après l’incendie du réacteur 4, le désastre n’est pas mieux géré que ne l’avait été la catastrophe elle même. A Bazar, un village contaminé et évacué en 1993, des Ukrainiens se réinstallent, pourtant la région reste polluée et dangereuse. Evgueni et Olga font partie de ces nouveaux arrivants, la guerre et l’arrivée des pro-russes les ont chassés du Donbass. Le maire leur a dit que la contamination avait disparu. Ils ont décidé de le croire, faute d’alternative.
+				</p>
+
+				<div class="block-content left">
+					<img src="img/map-tchernobyl.svg" alt="" class="zoom">
+					<div class="caption"><b>LA ZONE D'EXCLUSION</b>, qui suit les limites de la contamination, ne correspond pas exactement à la zone d'interdiction qui elle épouse les frontières administratives.</div>
+				</div>
+
+				<p>
+					Tchernobyl, Zone II, ce n’est pas un avertissement, ni une mise en garde, mais une interdiction. A cause des radiations, personne ne devrait y vivre. Les forêts dans un rayon de 30 kilomètres autour de la centrale, arrêtée il y aura trente ans le 26 avril 1986 à la suite du pire accident nucléaire de l'histoire, resteront radio-actives pour des milliers d'années.
+				</p>
+
+				<p>
+					Visiter les villes de Pripyat ou de Tchernobyl est possible. On peut même approcher le réacteur. A condition d’accepter d’être encadré. Et de ne pas s’écarter des sentiers battus. Avec Vadim, un ami et aussi mon chauffeur-traducteur-caméraman, nous avons décidé de faire autrement. D’entrer dans la zone par nos propres moyens et d’aller à notre guise, quitte à ne pas voir le réacteur, ni les lieux les plus connus de Tchernobyl.
+				</p>
+
+				<div class="block-content right">
+					<img src="img/intro-4.jpg" alt="" class="zoom">
+					<div class="caption"><b>AU CENTRE DE BAZAR</b>, à côté de la mairie, se dresse le monument en mémoire des martyres de la seconde guerre mondiale.</div>
+				</div>
+
+				<p>
+					A 120 kilomètres au nord-ouest de Kiev, le paysage change imperceptiblement, les villages aussi et les habitations désertées se multiplient. Nous sommes arrivés dans la «zone», sans avoir passé aucun check-point ni vu de panneau qui signale le risque de contamination radioactive. Les gens du coin savent savent eux où passe la frontière invisible car, après des tests effectués en 1993, certaines localités ont été évacuées en plus de celles qui l’avaient été au lendemain de la catastrophe. c’est le cas de Bazar. Une petite bourgade de quelques centaines de maisons qui tient son nom de son passé mongol, au 13ème siècle, alors qu’elle était le plus grand marché d’esclaves de toute la région.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-loyers.jpg')"><span>Des loyers à prix imbattable</span></section>
+
+		<section class="odd">
+			<div class="container">
+				
+				<!-- <h3 class="inter-titre">Des loyers à prix</h3> -->
+
+				<p>
+					Dans la rue centrale, cabossée, le trafic est anémique, les gens se retournent au passage de chaque véhicule, mais presque rien ne bouge. Deux tiers des bâtiments sont ravagés, comme si des bombes avaient été larguées, mais tout est est paisible. Au centre: la mairie, le parc adjacent et sa statue soviétique en mémoire des martyrs de la deuxième guerre mondiale. Parmi les personnes qui se sont récemment réinstallées à Bazar, il y a des familles de l’est de l’Ukraine qui ont décidé de s’exiler à cause de la guerre. Vadim me conduit à l’adresse de l’une d’entre elles: un couple de retraités qui, après avoir fui la République sécessionniste de Donetsk, a entièrement rénové une petite maison, qu’il a entourée d’une palissade, la seule au milieu des bicoques à l’abandon, envahies de buissons et de ronces en fleurs.
+				</p>
+
+				<p>
+					Evgueni et Olga nous reçoivent sur la rue en robe de chambre, pour lui beige et pour elle rose pétant. Ils viennent de Ienakievo, la ville natale de Viktor Ianoukovitch, l’ancien président en exil depuis la révolution de Maïdan: «Nous ne pouvions plus vivre dans le Donbass, les pro-russes nous menaçaient en raison de notre loyauté à l’Ukraine. Ce sont des bandits.»
+				</p>
+
+				<p>
+					C’est sur internet qu’ils ont eu vent de logement pas cher à louer dans la «zone». Ils ont alors pris contact avec le maire qui leur a attribué une des maisonnettes en souffrance. Evgueni est arrivé le premier avec quelques affaires, puis une dizaine de jours après sa femme est venue avec le reste des meubles. Leur fille et leur gendre ont suivi deux semaines plus tard pour s’installer dans une autre villa, à trois cent mètres de là. «Nous payons 156 hryvnas de loyer annuel (ndlr. Environ 6 chf), mais nous avons fait nous-mêmes tous les travaux de rénovation», explique Evgueni. Impossible de se loger ailleurs en Ukraine à ce prix, même dans les villes dévastées du Donbass, les loyers sont au moins vingt fois plus cher. «Nous avons aussi un immense jardin où nous faisons pousser patates, tomates, choux et salades et même de la vigne», poursuit-il.
+				</p>
+				
+			</div>
+		</section>
+
+		<section class="gallery double odd">
+			<div class="layout">
+				<div class="layout-inner">
+					<img src="img/loyer-vodka-3.jpg" alt="" class="zoom">
+					<div class="caption">
+						<b>EVGUENI ET OLGA</b> habitaient le Donbass jusqu'il y a peu. La guerre les a décidés à se réfugier à Bazar.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img src="img/loyer-vodka-1.jpg" alt="" class="zoom">
+					<div class="caption">
+						«Evidemment nous fumons tous les deux. Nous sommes des anciens mineurs.»
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="odd">
+			<div class="container">
+				
+				<p>
+					C’est sur internet qu’ils ont eu vent de logement pas cher à louer dans la «zone». Ils ont alors pris contact avec le maire qui leur a attribué une des maisonnettes en souffrance. Evgueni est arrivé le premier avec quelques affaires, puis une dizaine de jours après sa femme est venue avec le reste des meubles. Leur fille et leur gendre ont suivi deux semaines plus tard pour s’installer dans une autre villa, à trois cent mètres de là. «Nous payons 156 hryvnas de loyer annuel (ndlr. Environ 6 chf), mais nous avons fait nous-mêmes tous les travaux de rénovation», explique Evgueni. Impossible de se loger ailleurs en Ukraine à ce prix, même dans les villes dévastées du Donbass, les loyers sont au moins vingt fois plus cher. «Nous avons aussi un immense jardin où nous faisons pousser patates, tomates, choux et salades et même de la vigne», poursuit-il.
+				</p>
+				
+			</div>
+		</section>
+
+		<section class="gallery slider odd padding-bottom">
+			<div class="layout">			
+				<div class="bxslider">
+					<div>
+						<img src="img/gallerie-6b.jpg" alt="">
+					</div>
+					<div>
+						<img src="img/gallerie-7b.jpg" alt="">
+					</div>
+					<div>
+						<img src="img/gallerie-5b.jpg" alt="">
+					</div>
+					<div>
+						<img src="img/gallerie-1b.jpg" alt="">
+					</div>
+					<div>
+						<img src="img/gallerie-3b.jpg" alt="">
+					</div>
+					<div>
+						<img src="img/gallerie-8b.jpg" alt="">
+					</div>
+					
+					<div>
+						<img src="img/gallerie-10b.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-vodka.jpg')"><span>De la vodka contre<br> la radioactivité</span></section>
+		
+		<section>
+			<div class="container">
+
+				<!-- <div class="spacer-small"></div>
+				<div class="spacer-small"></div> -->
+
+				<!-- <h3 class="inter-titre">De la vodka contre la radioactivité</h3> -->
+
+				<p>
+					Et les radiations? Vous n’avez pas peur? «Il y a des coins du Donbass ou de Kiev où les radiations sont plus élevées qu’ici. On dit même que c’est pas trop mauvais pour la santé et que boire du vin ou de la vodka permet d’éliminer les toxines radioactives», explique en riant Olga. Le couple touche une double retraite de la compagnie minière où ils travaillaient. «Ce ne serait pas assez pour vivre. Heureusement, nous sommes presque autonome grâce à notre potager. En été et en automne, nous mangeons nos légumes frais et nos œufs et en hiver ce que nous avons mis en conserve», explique Evgueni. Par rapport à la plupart des habitants de Bazar, ils sont des privilégiés. Chef mécanicien dans la mine de Iénakovo Evgueni gagnait bien et sa femme, dans l’administration de la compagnie, aussi: «Nous avons quitté un superbe appartement stalinien de 100 mètres carrés», dit-elle tristement.
+				</p>
+
+				<p>
+					Ils n’utilisent pas de dosimètre pour mesurer la radioactivité de leurs cultures et font confiance à ce que leur a dit le maire. «Des chercheurs allemands qui ont étudié la contamination dans la région s’étaient installé à Bazar, c’est la preuve qu’il n’y a pas de problème ici. Des forêts sont contaminées vers Klishchi (qui se prononce comme Clichy à Paris) et au nord de Bazar, mais dans le village, il n’y a pas de problème.» La contamination des forêts non loin de Bazar, confirmée par les cartes qui montrent avec précision la dissémination de la radioactivité, n’empêche pas Evgueni d’aller aux champignons avec ses chiens et de cueillir des myrtilles. Le couple rigole: «Et alors? Nous venons du Donbass, on ne risque rien. Vous trouvez qu’on se porte mal?»
+				</p>
+				
+			</div>
+		</section>	
+
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img src="img/loyer-vodka-6.jpg" alt="" class="zoom">
+					<div class="caption">
+						<b>L'ÉGLISE DE KLISHCHI</b> est l'un des endroits les plus radioactifs de la commune de Bazar.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img src="img/loyer-vodka-4.jpg" alt="" class="zoom">
+					<div class="caption">
+						Le maire de la municipalité et ancien militaire, Budko Alexandr Vasilievitch, s'y recueille chaque semaine.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					Le maire, Budko Alexandr Vasilievitch, montre le même optimisme. Il nous reçoit dans son bureau austère dans une aile du rez-de-chaussée. Le reste de l’imposant bâtiment de deux étages est inutilisé. «Selon nos mesures, le taux de radioactivité est normal, comme à Kiev ou même moins. En fait, la mortalité est plus importante chez les personnes qui ont quitté le village. Je pense que le niveau de radiation que connaît Bazar permet de renforcer les défenses immunitaires.» Mais le petit dispensaire de Bazar ne soignant que les pathologies légères, les malades en fin de vie sont hospitalisés en dehors de la zone. Autre signe que les radiations ne sont pas létales, ajoute Budko Alexandr Vasilievitch: l’abondance du gibier. Selon lui, les cerfs, les élans et les loups pullulent: «Un chien a même été tué par un loup il y a quatre jours à côté de la mairie».
+				</p>
+
+			</div>
+		</section>	
+
+		<section class="inter-titre odd" style="background: url('img/titre-sante.jpg')"><span>En bonne santé grâce<br> aux radiations</span></section>
+
+		<section class="odd padding-bottom">
+			<div class="container">
+				
+				<!-- <h3 class="inter-titre">En bonne santé grâce aux radiations</h3> -->
+
+				<p>
+					Il est né à Bazar et, après vingt ans dans l’armée, il est revenu chez lui en 2004: «Je veux que les gens s’établissent ici. Surtout des enfants pour que Bazar devienne leur village.» Il sort d’un tiroir la constitution ukrainienne et en lit l’article 47: chaque Ukrainien doit pouvoir bénéficier d’un logement à un prix abordable. «Avec la crise économique actuelle ce n’est plus possible, ce que je fais en encourageant les gens à s’établir ici est dans l’esprit de la Constitution.» En 1986, au moment de la catastrophe, il y avait 2600 habitants. Mais, en 1993, à la suite de nouvelles mesures de la radioactivité, la zone II est élargie: Bazar et les villages alentours sont alors évacués. Le gouvernement reloge tous ceux qui doivent déménager. Mais 300 obstinés refusent d’abandonner leur village. En 2004, Bazar compte encore 240 âmes. Le maire entre alors en scène pour repeupler la zone et, en 2016, la population atteint désormais 570 habitants.
+				</p>
+
+				<div class="block-content left">
+					<img src="img/sante-1.jpg" alt="" class="zoom">
+					<div class="caption"><b>YOULIA LA BIBLIOTHÉQUAIRE</b>, pense que les radiations, à petite dose, sont bonnes pour la santé.</div>
+				</div>
+
+				<p>
+					Youlia, la bibliothécaire de Bazar, rejoint le maire. Elle fait partie de ceux qui sont partis et ont bénéficié du logement offert par l’État. Mais, dans un deuxième temps, elle a préféré revenir et donner son appartement à sa fille: «J’avais des allergies et mon mari ne se portait pas bien. Ici, ça va beaucoup mieux.» Le maire acquiesce, «l’air est pur ici grâce aux forêts, on devrait même y construire un sanatorium.» Deux sociétés d’exploitation forestière emploient chacune une quinzaine de personnes, mais cela ne suffit pas déplore le maire: «Nous avons deux problèmes: l’alcool et le chômage qui dépasse les 60%».
+				</p>
+
+				<div class="block-content right">
+					<img src="img/sante-4.jpg" alt="" class="zoom">
+					<div class="caption">«<b>RADIOACTIF!</b>» Interdiction de cueillir baies et champignons.</div>
+				</div>
+
+				<p>
+					Budko Alexandr Vasilievitch aimerait développer l’agriculture et attirer les investisseurs. La contamination radioactive autorise-t-elle les cultures? «Les légumes sont testés au marché, il n’y a jamais de problème. Seules quelques forêts sont polluées, à Klishchi surtout», assène-t-il. Le classement en zone II interdit la vente des maisons qui sont propriété de l’État, mais le maire espère que le gouvernement déclasse la commune de Bazar: «Cela aurait dû se faire cette année à l’occasion du trentième anniversaire, mais le dossier n’avance pas malgré les promesses et les études qui montrent que la disparition partielle du rayonnement radioactif».
+				</p>
+
+			</div>
+		</section>
+
+		<!-- <section class="gallery small odd">
+			<div class="layout">
+				<img src="img/choixcompo1.jpg" alt="" class="zoom">
+				<div class="caption">
+					<b>CHOIX DIFFICILE</b> à l'heure de sélectionner les composants de sa montre. Chacun d'entre-eux donnera au résultat final un caractère unique
+				</div>
+			</div>
+		</section>
+
+		<section class="odd">
+			<div class="container">
+				
+				<p>
+					La pause de midi, dans un très bon restaurant de la place, marque l’occasion d’échange en tous genres sur l’horlogerie. On écoute les anecdotes de Michel Berberat sur ses premiers cours d’horlogers, on apprend comment la popularité de la startup a bondi grâce à une collaboration avec le site Qoqa.ch, on cuisine (sans succès) le patron sur «cette grande marque horlogère» qui a approché Initium pour un possible partenariat… 
+				</p>
+
+			</div>
+		</section> -->
+
+		<section class="inter-titre" style="background: url('img/titre-confusion.jpg')"><span>Confusion à Kiev</span></section>
+
+		<section>
+			<div class="container">
+
+				<!-- <h3 class="inter-titre">Confusion à Kiev</h3> -->
+
+				<p>
+					Nous nous rendons à Kiev chez Vitalii Petruk, le chef de l’Agence ukrainienne d’administration de la zone d’exclusion de Tchernobyl, pour savoir si les terres de Bazar peuvent être cultivées sans risque. Il n’a jamais entendu parler de Bazar et s’enquiert auprès de son adjoint qui n’en sait pas plus. Son département a publié un fascicule de cartes des différentes zones. Il les détaille: la zone I dite des 10 kilomètres est totalement fermée, la zone II dite d’exclusion obligatoire est fermée, mais on peut y séjourner quelques heures à condition d’être muni du permis ad hoc et d’être accompagné d’un guide. «Dans la zone I le rayonnement dépasse par endroits les 4 μSw par heure (μSw/h). Dans la zone II en revanche le rayonnement tourne autour des 0.3 μSw/h, mais des taches de contamination à près de 3 μSw/h subsistent notamment dans les forêts. (ndlr. A titre de comparaison, en Europe un territoire doit être évacué à partir de 1 μSw/h). C’est pour cela qu’on ne peut s’y rendre qu’accompagné d’une personne qui connaît les lieux à éviter.» Dans tous les cas, la culture y est interdite. La chasse et la coupe du bois aussi. De même que la cueillette des baies et des champignons dans lesquels se concentre la radioactivité.
+				</p>
+				
+			</div>
+		</section>
+
+		<!-- <section class="gallery small">
+			<div class="layout">
+				<img src="img/confusion-1.jpg" alt="" class="zoom">
+				<div class="caption">
+					<b>CHOIX DIFFICILE</b> à l'heure de sélectionner les composants de sa montre. Chacun d'entre-eux donnera au résultat final un caractère unique
+				</div>
+			</div>
+		</section> -->
+
+		<section class="video">
+			<div class="video-wrapper">
+				<div class="trigger"></div>
+				<video controls poster="img/poster.jpg">
+				  <source src="https://player.vimeo.com/external/164230645.hd.mp4?s=a70f39151566de6fc7e99739d80fc56af730bd16&profile_id=119" type="video/mp4">
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+
+				<p>
+					Comment se fait-il donc qu’à Bazar les gens cultivent et récoltent sans souci? Pour Vitalii Petruk, s’il y a des gens à Bazar, c’est que la ville ne fait pas partie de la zone. Une des cartes confirme ses dires, mais une autre en revanche inclut Bazar dans la zone II. «Elles sont schématiques», s’impatiente le fonctionnaire. Les contours semblent au contraire très précis. Mais sur un des deux plans, la limite de la zone II suit les frontières administratives de l’oblast (région) de Kiev et non pas celles des mesures constatées sur le terrain. En fait, seule la partie de la zone II qui se situe dans la région de Kiev est surveillée, mais pas celle qui dépend de l’oblast de Jitomir où se trouve Bazar. La radioactivité n’y est pourtant pas inférieure.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery double margin-bottom">
+			<div class="layout">
+				<div class="layout-inner">
+					<img src="img/confusion-5.jpg" alt="" class="zoom">
+					<!-- <div class="caption">
+						Une étude sur Panyu, un espace en dehors de Shenzhen qui n’est ni une ville, ni un espace agricole, ni une banlieue (Margaret Crawford, Max Hirsh, Dorothy S. Tang)
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img src="img/confusion-8.jpg" alt="" class="zoom">
+					<!-- <div class="caption">
+						L'artiste Jimenez Lai a reproduit les objets fabriqués dans la région du delta des perles
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery big">
+			<div class="layout">
+				<img src="img/confusion-15.jpg" alt="" class="zoom">
+				<!-- <div class="caption">
+					<b>AU-DEHORS</b> tombe la neige. Une ambiance propice à un travail minutieux dans l'atelier
+				</div> -->
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					Retour à Bazar. Selon des forestiers, un fermier de Lougansk dans le Donbass aurait repris une grande exploitation agricole dans le hameau voisin de Mezhyliska. Youri Mikhailovitch Andréiev a été kidnappé par les rebelles séparatistes. Il est torturé et séquestré pendant 207 jours et enfin libéré en échange d’une rançon. Sa vie devenue impossible dans le territoire contrôlé par les pro-russes, il décide de migrer: «Pour celui qui veut travailler, Bazar c’est comme l’Alaska. Tout est possible. J’ai emprunté 500 000 dollars pour réparer les installations et louer 1000 hectares de terres.» Il veut faire du bio et exporter: «Je ne cultive que les terres vierges de toute pollution». Et pour prouver son engagement, il nous emmène muni d’un dosimètre sur l’un de ses champs: 0.15 μSw/h, similaire à ce qu’on a à Kiev.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-pasmourir.jpg')"><span>«Je ne veux pas<br> mourir de faim»</span></section>
+
+		<section class="odd">
+			<div class="container">
+				
+				<!-- <h3 class="inter-titre">«Je ne veux pas mourir de faim»</h3> -->
+
+				<p>
+					Nous poursuivons avec lui vers des champs à l’arrière de Bazar: «Le maire voulait me les louer, mais j’ai découvert qu’ils sont radioactifs. Les loyers sont modiques pour les maisonnettes mais plus élevés pour les terres. Le maire est un escroc qui empoche illégalement l’argent.» Le dosimètre s’affole et se met à biper bruyamment, le sol est contaminé: 0.35 μSw/h au moins, quant au strontium radioactif, il y en a deux cent fois la dose maximale autorisée.
+				</p>
+
+				<div class="block-content right">
+					<img src="img/pasmourir-3.jpg" alt="" class="zoom">
+					<div class="caption"><b>DEUX CHERCHEURS DE L'UNIVERSITÉ DE JITOMIR</b> relèvent les taux de radioactivités dans les cultures de patates. «Mieux vaut manger beaucoup de patates et peu de champignons!»</div>
+				</div>
+
+				<p>
+					Vladimir, Le propriétaire n’est pas loin. Nous l’informons de nos découvertes et du danger: «Et alors? Le président Petro Porochenko n’a rien fait pour moi. Le gouvernement ne m’a pas nourri. Et le seul risque ici, c’est de mourir de faim.» Il montre du doigt deux personnes affairées à faire des mesures sur une parcelle adjacente: «Demandez-leur, ils savent». Ce sont deux chercheurs de l’Institut de biotechnologie de l’université de Jitomir. Mikhailo Vychnuk, le responsable, se veut rassurant: «Il y a environ 300 becquerels par kilo de terre, ça va. Plus les radionucléides, césium et strontium. Nous cultivons des patates en essayant de diminuer la radioactivité.» Les mangeriez-vous? «Je ne suis pas médecin, mais je les mange déjà.» Et les champignons des forêts polluées? «Aussi, mais il vaut mieux manger beaucoup de patates et peu de champignons!»
+				</p>
+
+				<p>
+					Impossible d’obtenir des chiffres sur l’espérance de vie et le nombre de patients atteints de cancer. Pour Youri Mikhailovitch Andréiev, le fermier de Lougansk, l’alcool tue probablement plus que le cancer. Il nous montre un groupe d’adolescents qui se battent en titubant dans un abribus désaffecté: «Je les connais, ils refusent de bosser et préfèrent désosser totalement un mur pour en retirer l’acier. De quoi gagner 300 hryvnas (12chf ) qu’ils dépensent pour acheter 12 bouteilles de samogon (la vodka artisanale).»
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery small odd">
+			<div class="layout">
+				<img src="img/pasmourir-2.jpg" alt="" class="zoom">
+				<div class="caption">
+					«Je ne peux pas vous recevoir, je ne me sens pas bien à cause d’allergies dermatologiques».
+				</div>
+			</div>
+		</section>
+
+		<section class="odd padding-bottom">
+			<div class="container">
+
+				<p>
+					Les rumeurs font état d’une augmentation des cas de cancer. Nicolai et Galina, un couple de retraités, n’ont jamais quitté leur maison: «Je ne peux pas vous recevoir, je ne me sens pas bien à cause d’allergies dermatologiques», explique la vieille babouchka. Ont-ils eu vent de cas de cancers? «Oui, beaucoup de gens en ont eu». Le mari reprend: «Et personne ne veut en parler.»
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-champignons.jpg')"><span>Ne pas manger les<br> champignons géants</span></section>
+
+		<section>
+			<div class="container">
+				
+				<!-- <h3 class="inter-titre">Ne pas manger les champignons géants</h3> -->
+
+				<p>
+					Les divertissements sont plutôt rares à Bazar. La nuit tombée, quelques jeunes se retrouvent devant le bar-restaurant. La serveuse qui flirte avec l’un de ses clients préfère rester dans le noir sur le perron de son établissement. Trois forestiers d’une vingtaine d’années, éméchés, la taquine sans malice.
+				</p>
+
+				<p>
+					Contrairement aux apparences, le restaurant n’est pas fermé, il est juste plongé dans l’obscurité. Il y a même de quoi manger, des varenikis (gros raviolis à la vapeur) aux patates ou aux champignons. Nous demandons en sortant le dosimètre: «Radioactifs?» Ambiance de plomb, personne ne goûte la plaisanterie. Entre les deux options possibles – battre en retraite ou tenter de nouer une conversation - la deuxième est la plus tentante: est-il possible de pénétrer la zone interdite par les chemins de traverse? Un des trois comparses, Piotr, se propose de faire le guide, mais il veut un cadeau. «J’aimerais bien un dosimètre, j’ai ramassé quelques vieilleries et je voudrais vérifier que c’est sans danger». Pas de doute, c’est un contrebandier, un stalker, qui pille illégalement la zone de tout son métal. «Fort comme tu es, t’as pas besoin de dosimètre. Evite simplement de manger les champignons géants.» Tout le monde éclate de rire sauf l’intéressé.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery small">
+			<div class="layout">
+				<img src="img/nepasmangerleschampignons-2.jpg" alt="" class="zoom">
+				<div class="caption">
+					<b>POUR VLADIMIR, UN FORESTIER</b>, qu'importe que la chasse ait été interdite. Personne ne contrôle.
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					Piotr promet de nous emmener le lendemain, mais il ne viendra pas au rendez-vous. Les risques de se faire prendre l’ont-ils dissuadé? Improbable, car il y est allé plus d’une fois sans craindre les policiers qui quadrillent la zone. Il les connaît certainement, peut-être même font-ils affaire ensemble. En revanche, y conduire illégalement des étrangers, qui pourraient y être des témoins indésirables, multiplie les embrouilles.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-culot.jpg')"><span>Passage au culot</span></section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Si presque tous à Bazar conviennent qu’il y a un ou plusieurs barrages pour interdire l’accès à la partie de la zone II qui est interdite, personne ne s’accorde sur leur localisation. Les deux anciens du village, Nicolai et Galina, ont un itinéraire précis, dont ils assurent qu’il permet d’éviter les contrôles. Certes, la route est cabossée, mais elle permettrait de rejoindre, par les bois et sans faire de détour, la grand route qui mène à Poliske, l’une des trois villes à l’intérieur du périmètre interdit.
+				</p>
+
+				<p>
+					Les premiers kilomètres, le dosimètre reste silencieux. Mais, à partir de Markivka, la forêt envahit la piste et les radiations augmentent, rythmées par les bip-bip de plus en plus rapides de notre mini compteur Geiger. Aucun panneau n’annonce la forêt contaminée, juste une pancarte pour prévenir que la chasse y réglementée. L’asphalte disparaît sous les herbes folles et les branchages effondrés. De part et d’autre de la piste, des bâtiments vides et ruinés montent la garde, mais des ornières indiquent que nous ne sommes pas les premiers à passer. Cette portion de forêt dépend de l’oblast de Kiev, elle est strictement interdite et devrait même être surveillée, mais rien ne le signale.
+				</p>
+
+				<p>
+					A Bober, nous rejoignons l’axe principal. Une pancarte orientée en sens inverse avertit du danger de qui habite la forêt dons nous nous extirpons. Impossible qu’il n’y ait pas de barrage policier avant Poliske, nous nous préparons à faire demi-tour. Mais c’est trop tard: le check-point est devant nous, un homme veille sur un portail abattu. surtout ne pas hésiter, faire semblent d’avoir une mission officielle. Sans ralentir, nous faisons signe au factionnaire de relever sa barrière et, contre toute attente, il s’exécute. Mazette, cela s’est fait presque trop facilement: comment se réjouir de se retrouver dans une zone interdite hautement radioactive, et du mauvais côté de la clôture?
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/titre-poliske.jpg')"><span>Poliske, ville fantôme</span></section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					La route relie Poliske à Tchernobyl et Pripyat, où se trouvent les infrastructures les plus contaminées et où convergent les touristes de l’extrême. Poliske, tout à l’ouest de la zone interdite n’est pas moins radioactive, mais elle est moins visitée. Les routes qui y mènent ont presque toutes été remblayées, pour empêcher que des véhicules y pénètrent. Nous dissimulons la voiture sur le bas-côté de la route et poursuivons à pied, le long des allées abandonnées. Peuplier et bouleaux ont partout percé la chaussée, mais le tracé demeure. Autour, au milieu des branchages, des façades borgnes se dissimulent devant le maigre feuillage d’avril, c’est à la fois la ville et la forêt.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery double margin-bottom">
+			<div class="layout">
+				<div class="layout-inner">
+					<img src="img/poliske-4.jpg" alt="" class="zoom">
+					<!-- <div class="caption">
+						Une étude sur Panyu, un espace en dehors de Shenzhen qui n’est ni une ville, ni un espace agricole, ni une banlieue (Margaret Crawford, Max Hirsh, Dorothy S. Tang)
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img src="img/poliske-6.jpg" alt="" class="zoom">
+					<!-- <div class="caption">
+						L'artiste Jimenez Lai a reproduit les objets fabriqués dans la région du delta des perles
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery big">
+			<div class="layout">
+				<img src="img/poliske-8.jpg" alt="" class="zoom">
+				<!-- <div class="caption">
+					<b>AU-DEHORS</b> tombe la neige. Une ambiance propice à un travail minutieux dans l'atelier
+				</div> -->
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					Pas un bruit, le palais du peuple, la mairie et le centre culturel dominent des avenues inutiles. La grande place et sa statue soviétique sont figées dans un silence de plomb. Rien n’invite à explorer les bâtiments à l’abandon. Des gravats encombrent les entrées, tout ce qui pouvait être pris l’a été. Il ne reste rien sinon les carcasses et des fantômes.
+				</p>
+
+				<p>
+					Un vrombissement brouille le silence. Une voiture déboule: quatre passagers inamicaux. Des pilleurs certainement aussi surpris que nous de cette rencontre inopinée. Mais eux ont le sésame officiel, ils nous montrent leur laisser-passer et nous menacent. Il est 18 heures, la nuit va tomber, à quoi bon se cacher dans les débris d’un immeuble vide au milieu des rats, poursuivis par des voyous? Continuer jusqu’à Tchernobyl, et se faire arrêter plus loin? Nous décidons de quitter définitivement l’univers hostile de la zone.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- <section class="encart odd padding-bottom">
+			<div class="container">
+				
+				<h3>Les initiatives proposant aux clients d’assembler leur propre montre sont de plus en plus nombreuses.</h3>
+
+				<p>
+					Car oui, monter sa montre, c’est très à la mode. Depuis quelques années, de plus en plus de sociétés offrent cette possibilité sous différentes formes. En 2012, quand Mathieu Gigandet et ses deux associés ont eu l’idée de se lancer dans l’aventure Initium, ce concept était confidentiel.
+				</p>
+
+				<p>
+					On parlait surtout de l’initiative d’Olivier Piguet à la Vallée de Joux. Ce dernier a donné son premier cours au printemps 2008. Ancien propriétaire d’un magasin d’horlogerie, il a eu cette idée pour <b>faire plaisir à ses anciens clients</b> «qui voulaient [le] voir réparer leurs montres», explique-t-il par téléphone. Aujourd’hui, le Centre d’initiation à l’horlogerie d’Olivier Piguet rencontre un tel succès que le temps d’attente pour aller monter sa montre chez lui est de deux ans. «J’ouvre déjà les cours de juin 2018», explique-t-il.
+				</p>
+
+				<p>
+					Et ce même si l’offre s’est considérablement développée ces dernières années. Mathieu Gigandet estime qu’aujourd’hui, «entre cinq et dix initiatives de ce genre ont vu le jour» – <b>chacune proposant un concept plus ou moins différent de celui des autres</b>. Outre Initium (Le Noirmont) et le Centre d'initiation à l'horlogerie (Vallée de Joux), on peut citer Time Experience SàRL (Porrentruy), la Fondation Horlogère (Porrentruy également) mais aussi le Centre Horloger (Neuchâtel) ou même Objectif Horlogerie (Paris). Et cette liste n’est pas exhaustive.
+				</p>
+
+				<p>
+					Comment expliquer ce succès? «Les loisirs, aujourd’hui, ce n’est plus d’aller à la plage et de ne rien faire. C’est d’apprendre quelque chose», avance Olivier Piguet. <b>«Le vrai luxe, aujourd’hui, ce n’est plus le produit mais l’expérience»</b>, ajoute pour sa part Mathieu Gigandet. Le président de la Fédération horlogère Jean-Daniel Pasche a également constaté l’engouement pour cette nouvelle pratique. Engouement des collectionneurs et des passionnés mais aussi de la branche elle-même. «De telles formations permettent à des commerciaux de se familiariser avec le produit.»
+				</p>
+
+				<p>
+					Assembler sa propre montre? Si de plus en plus de marques organisent une expérience de montage/démontage d’un mouvement pour leurs collaborateurs, quelques journalistes ou certains clients triés sur le volet, elles rechignent en revanche à permettre à des clients de venir mettre en boîte leurs propres garde-temps. «Ce n’est pas notre coeur de métier. De tels cours restent un outil de communication artisanal», répond-on chez l’une. «Ce ne serait simplement pas possible: toutes nos montres doivent toutes passer un contrôle de qualité de 1000 heures», explique-t-on chez l’autre.
+				</p>
+
+				<p>
+					Pour Olivier Piguet, cela devrait bientôt changer. «Les marques horlogères vont s’y mettre. Elles voudront absolument garder leurs clients.»
+				</p>
+
+				<br><br><br><br><br>
+
+			</div>
+		</section> -->
+
+		<!-- <section class="video">
+			<div class="video-wrapper">
+				<div class="trigger"></div>
+				<video controls poster="img/shenzhen_loft_poster.jpg">
+				  <source src="https://player.vimeo.com/external/152576336.hd.mp4?s=d063aaf1e64be16cec6ec8937262c245e9df4d81&profile_id=119" type="video/mp4">
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+		</section> -->
+
+		<!-- <section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img src="img/slb20.jpg" alt="">
+					<div class="caption">
+						Une étude sur Panyu, un espace en dehors de Shenzhen qui n’est ni une ville, ni un espace agricole, ni une banlieue (Margaret Crawford, Max Hirsh, Dorothy S. Tang)
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img src="img/slb17.jpg" alt="">
+					<div class="caption">
+						L'artiste Jimenez Lai a reproduit les objets fabriqués dans la région du delta des perles
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="chrono">
+
+			<svg class="hand" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="50px"  viewBox="0 0 74.146 59.227" enable-background="new 0 0 74.146 59.227" xml:space="preserve">
+				<g id="doigt">
+					<path fill="#930025" d="M54.455,44.906l10.816-10.816c1.204-2.689,3.589-8.012,5.088-11.369L52.803,5.164
+						c-0.673,0.542-1.5,0.97-2.259,1.155c-2.881,0.699-17.501,4.248-22.171,5.34c-2.563,0.596-4.154,1.369-4.729,2.298
+						c-0.207,0.334-0.45,0.925-0.16,2.165c0.373,1.583,0.757,3.22,8.651,2.066c0.011,0,0.02,0.003,0.028,0l3.492-3.491
+						c0.444-0.444,1.163-0.445,1.607-0.001c0.444,0.445,0.444,1.163,0,1.608L16.97,36.595c-1.337,1.336-1.337,3.514,0,4.85
+						c1.336,1.338,3.513,1.338,4.85,0l13.28-13.279c0.445-0.445,1.163-0.445,1.608,0c0.444,0.443,0.444,1.162,0,1.607l-6.091,6.09
+						l2.456,2.457c1.336,1.336,3.513,1.336,4.85-0.002l3.665-3.664c0.444-0.445,1.163-0.445,1.608,0c0.444,0.443,0.444,1.162,0,1.607
+						l-3.488,3.488l1.798,1.799c1.333,1.334,3.51,1.334,4.847-0.004l3.133-3.133c0.444-0.443,1.162-0.443,1.607,0
+						c0.441,0.443,0.445,1.164,0,1.609l-3.133,3.131c-0.02,0.02-0.038,0.033-0.058,0.053L49.6,44.9c1.336,1.338,3.51,1.336,4.848-0.002
+						L54.455,44.906z M71.685,18.334L56.098,2.748c-0.201-0.202-0.335-0.321-0.428-0.39c-0.162,0.142-0.395,0.373-0.535,0.515
+						c-0.215,0.215-0.455,0.455-0.701,0.7l16.91,16.91c0.179-0.405,0.294-0.671,0.325-0.745C71.769,19.506,72.056,18.711,71.685,18.334z
+						 M47.988,46.505l-2.058-2.059c-2.032,0.758-4.41,0.33-6.04-1.301l-2.063-2.062c-2.102,0.941-4.652,0.559-6.372-1.162L29,37.464
+						l-5.58,5.58c-2.224,2.225-5.842,2.225-8.065,0c-2.224-2.223-2.224-5.842,0-8.064l14.217-14.217
+						c-5.317,0.422-7.514-0.757-8.306-4.13c-0.365-1.547-0.221-2.817,0.442-3.884c0.931-1.499,2.884-2.552,6.143-3.314
+						C32.512,8.348,47.119,4.8,50,4.096c0.53-0.127,1.201-0.517,1.629-0.945c0.119-0.118,0.246-0.245,0.376-0.375
+						c0.003-0.003,0.009-0.009,0.011-0.012c0.006-0.005,0.008-0.007,0.014-0.014c0.503-0.497,1.053-1.047,1.494-1.488
+						c1.26-1.26,2.299-2.006,4.183-0.122l15.59,15.59c0.934,0.935,1.107,2.352,0.475,3.878c-0.273,0.666-6.262,14.023-6.516,14.593
+						c-0.055,0.127-0.135,0.24-0.234,0.34L56.055,46.505C53.831,48.73,50.215,48.732,47.988,46.505z"/>
+				</g>
+				<g id="ligne">
+					<path fill="#930025" d="M14.615,50.628l-1.92,7.168c-0.166,0.607,0.193,1.23,0.801,1.391c0.611,0.164,1.236-0.195,1.395-0.805
+						l1.92-7.166c0.113-0.406-0.016-0.822-0.293-1.1c-0.135-0.135-0.309-0.238-0.508-0.293C15.405,49.662,14.781,50.019,14.615,50.628z"
+						/>
+					<path fill="#930025" d="M21.181,51.222l1.077,4.016c0.164,0.605,0.787,0.963,1.393,0.801c0.604-0.162,0.969-0.787,0.803-1.395
+						l-1.076-4.016c-0.053-0.203-0.155-0.371-0.293-0.508c-0.279-0.279-0.693-0.408-1.102-0.297
+						C21.374,49.984,21.015,50.607,21.181,51.222z"/>
+					<path fill="#930025" d="M27.152,48.443L30.1,51.39c0.445,0.445,1.164,0.443,1.607,0c0.445-0.445,0.445-1.164,0-1.607l-2.947-2.947
+						c-0.444-0.445-1.162-0.445-1.607,0C26.709,47.279,26.711,48.001,27.152,48.443z"/>
+					<path fill="#930025" d="M6.875,26.558c-0.443,0.443-0.444,1.162,0.001,1.607l2.358,2.359c0.445,0.445,1.164,0.443,1.607,0
+						c0.445-0.445,0.445-1.162,0-1.607l-2.358-2.359C8.038,26.113,7.32,26.113,6.875,26.558z"/>
+					<path fill="#930025" d="M0.039,33.599c-0.163,0.609,0.199,1.232,0.805,1.395l5.612,1.502c0.61,0.164,1.231-0.199,1.395-0.803
+						c0.11-0.408-0.017-0.824-0.293-1.1C7.423,34.458,7.249,34.357,7.05,34.3l-5.613-1.502C0.832,32.634,0.202,32.994,0.039,33.599z"/>
+					<path fill="#930025" d="M2.332,41.968c-0.604,0.164-0.964,0.787-0.807,1.393c0.163,0.604,0.787,0.969,1.396,0.803l4.128-1.107
+						c0.608-0.166,0.967-0.789,0.805-1.395c-0.05-0.199-0.155-0.371-0.293-0.508c-0.276-0.277-0.693-0.4-1.099-0.293L2.332,41.968z"/>
+					<path fill="#930025" d="M10.837,46.837c0.444,0.445,0.444,1.164,0,1.609L8.48,50.802c-0.444,0.445-1.163,0.443-1.607,0
+						c-0.445-0.445-0.445-1.164-0.001-1.609l2.359-2.357C9.676,46.39,10.397,46.394,10.837,46.837z"/>
+				</g>
+			</svg>
+
+			<div class="container">
+				<h3>L'histoire express de Shenzhen</h3>
+			</div>
+
+			<div class="container special">
+				<div class="cd-horizontal-timeline">
+					<div class="timeline">
+						<div class="events-wrapper">
+							<div class="events">
+								<ol>
+									<li><a href="#0" data-date="01/01/1960" class="selected">- 5'000</a></li>
+									<li><a href="#0" data-date="01/01/1974">1953</a></li>
+									<li><a href="#0" data-date="01/01/1982">1979</a></li>
+									<li><a href="#0" data-date="01/01/1985">1980</a></li>
+									<li><a href="#0" data-date="01/01/1988">1988</a></li>
+									<li><a href="#0" data-date="01/01/1991">1991</a></li>
+									<li><a href="#0" data-date="01/01/1994">1998</a></li>
+									<li><a href="#0" data-date="01/01/2002">2015</a></li>
+								</ol>
+								<span class="filling-line" aria-hidden="true"></span>
+							</div> 
+						</div> 
+
+						<ul class="cd-timeline-navigation">
+							<li><a href="#0" class="prev inactive">Prev</a></li>
+							<li><a href="#0" class="next">Next</a></li>
+						</ul> 
+					</div> 
+
+					<div class="events-content">
+						<ol>
+							<li class="selected" data-date="01/01/1960">
+		                        <h4>Premières traces d'habitations.</h4>
+							</li>
+							
+							<li data-date="01/01/1974">
+		                        <h4>Fermeture de la frontière avec Hongkong. Shenzhen ne compte que quelques villages de pêcheurs.</h4>
+							</li>
+
+							<li data-date="01/01/1982">
+		                        <h4>Shenzhen devient l'une des Zones économiques spéciales de Chine, à l'initiative de Deng Xiaoping. Sa superficie fait près de 2000 km2, un peu plus que le canton de Fribourg. Elle compte 280&nbsp;000 habitants.</h4>
+							</li>
+
+							<li data-date="01/01/1985">
+		                        <h4>Usines et tours commencent à sortir de terre avec l’aide de 20&nbsp;000 hommes envoyés par l’armée.</h4>
+							</li>
+
+							<li data-date="01/01/1988">
+		                        <h4>Shenzhen acquiert le statut de province. De nouveaux pouvoirs, législatifs, lui seront confiés au début des années 1990.</h4>
+							</li>
+
+							<li data-date="01/01/1991">
+		                        <h4>Ouverture de la bourse de Shenzhen.</h4>
+							</li>
+
+							<li data-date="01/01/1994">
+		                        <h4>Début de la construction du quartier d’affaires à l’américaine de Futian.</h4>
+							</li>
+							<li data-date="01/01/2002">
+		                        <h4>Plus de 15 millions d'habitants, peut-être 17 millions selon certaines estimations qui prennent en compte le nombre de carte SIM dans la ville.</h4>
+							</li>
+						</ol>
+					</div> 
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="gallery small">
+			<div class="layout">
+				<img src="img/intro3.jpg" alt="" class="zoom">
+				<div class="caption">
+					<b>AU-DEHORS</b> tombe la neige. Une ambiance propice à un travail minutieux dans l'atelier
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="gallery medium">
+			<div class="layout">
+				<img src="img/slb1.jpg" alt="">
+				<div class="caption">Un groupe de touriste chinois se prennent en photo au centre Sea World, un complexe composé d’appartements de luxe, d’un centre commercial et d’un célèbre bateau-restaurant.<br>
+				<b>Crédit photo: </b>Clément Bürge</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="gallery big padding-bottom">
+			<div class="layout">
+				<img src="img/mouvement-exercice4.jpg" alt="" class="zoom">
+				<div class="caption">
+					Un employé de la biennale de Shenzhen fait une sieste sur un canapé
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="gallery hero">
+			<div class="layout" style="background:url('img/dsc_2691bis.jpg');">
+				<img src="img/dsc_2691bis.jpg" alt="">
+				<div class="caption">
+					Un garde de sécurité déguisé en marin veille à la tranquillité du complexe Sea World
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="credits">
+			<div class="container">
+				<p>
+					<b>Musique:</b> Podington Bear<br>
+					<b>Réalisation web:</b> César Greppin
+				</p>
+			</div>
+		</section> -->
+
+		<!-- <blockquote class="right">
+			<span>Autant te dire que les vis, d’habitude, je ne les attrape pas avec des brucelles...</span>
+			<div class="caption"><b>OLIVIER WÜTHRICH</b>, mécanicien à La Chaux-de-Fonds</div>
+		</blockquote> -->
+
+		<!-- <div class="block-content left medallion">
+			<img src="img/spirale.gif" alt="" class="zoom">
+			<div class="caption"><b>LE SPIRAL</b> est le coeur du mouvement et donne vie à l'ensemble de la pièce</div>
+		</div> -->
+
+		<footer>
+			<!-- <hr class="end"> -->
+			<div class="container">
+
+				<h5>Nos grands formats</h5>
+
+				<div class="row">
+					<a href="http://labs.letemps.ch/interactive/2016/shenzhen/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_shenzhen.jpg');"></div>
+							<div class="caption">Shenzhen, de la fumée des usines aux ateliers d'artistes</div>
+						</div>
+					</a>
+					<a href="http://labs.letemps.ch/interactive/2015/led/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/led-thumb.jpg');"></div>
+							<div class="caption">L’étonnante biodiversité des tiroirs des musées</div>
+						</div>
+					</a>
+				</div>
+				
+				<div class="row">
+					<a href="http://labs.letemps.ch/interactive/2016/montre-suisse/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-montre.jpg');"></div>
+							<div class="caption">Comment j'ai fabriqué ma montre en 8 heures</div>
+						</div>
+					</a>
+					<a href="http://labs.letemps.ch/interactive/2015/lumieres/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_lumieres.jpg');"></div>
+							<div class="caption">Les lumières de la ville</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="credits">
+				Réalisation web: César Greppin
+			</div>
+		</footer>
+		
+		{{ block('footer_brand') }}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+        <script src="js/intro-control.js"></script>
+        <script src="js/viewport.js"></script>
+        <script src="js/timeline-control.js"></script>
+        
+        <script src="js/main.js"></script>
+        <!--<script src="js/timeline-clic.js"></script>-->
+        <script src="js/video-control.js"></script>
+        <!--<script src="js/hero-control.js"></script>-->
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/zoom.js"></script>
+
+	</body>
+</html>

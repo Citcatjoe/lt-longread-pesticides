@@ -1,0 +1,1348 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		{{ block('head_brand') }}
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,900,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script>var players = [];</script>
+
+	</head>
+	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }}
+
+		<!-- <div class="fixed-map-wrapper">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 352 824" style="enable-background:new 0 0 352 824;" xml:space="preserve">
+				<style type="text/css">
+					.st0{display:none;}
+					.st1{fill:none;stroke:#C9C9C9;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+					.st2{fill:none;stroke:#BFBFBF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+					.st3{fill:none;stroke:#00AFF4;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+					.st4{opacity:0.75;}
+					.st5{fill:#4C4C4C;}
+					.st6{font-family:'HelveticaNeue-Light';}
+					.st7{font-size:13.5138px;}
+					.st8{fill:#545454;}
+					.st9{font-size:19.9114px;}
+					.st10{stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+					.st11{opacity:0.75;fill:#4C4C4C;enable-background:new    ;}
+					.st12{opacity: 0.25 !important;}
+				</style>
+				<g id="map" class="st0">
+					
+						<image style="display:inline;overflow:visible;opacity:0.51;" width="1914" height="1110" xlink:href="../../../../Desktop/Capture d’écran 2017-07-10 à 13.47.32.png"  transform="matrix(0.3805 1.429 -1.429 0.3805 479.8834 -585.5818)">
+					</image>
+				</g>
+				<g id="wall">
+					<g id="Calque_2" class="st0">
+						
+							<image style="display:inline;overflow:visible;opacity:0.65;enable-background:new    ;" width="1914" height="1110" xlink:href="../../../../Desktop/Capture d’écran 2017-07-10 à 13.47.32.png"  transform="matrix(0.2159 0.7463 -0.7463 0.2159 330.298 -298.1519)">
+						</image>
+					</g>
+					<g id="Calque_1_1_">
+						<g id="path-full">
+							<path class="st1" d="M120.4,48.5c0,0,21.2,69.4,25.1,77.1s19.3,38.5,21.2,46.3c1.9,7.7,3.9,21.2,3.9,21.2h-25.1v88.7l-7.7,25.1
+								l-5.8,21.2v52l-5.8,19.3v17.3l-5.8,55.9l25.1,67.5l7.7,40.5l15.4,38.5l9.6,30.8c0,0,28.9-7.7,30.8-7.7c1.9,0,9.6,1.9,9.6,1.9V673
+								l21.2,38.5l9.6,34.7"/>
+						</g>
+					</g>
+				</g>
+				<g id="path-phoenix-nogales">
+					<path class="st3" d="M277.1,344.2l-7.3,6.5l-1.6,8.6l-8.6,3l-21.5,24.5l-9.4,3.2c-0.9,1-6,16.3-9.1,25l-19.1,31.2l-34.7,9.1
+						l-10.8-2.4l-14,4.8l-4.6,6.7l-14.5,9.9"/>
+				</g>
+				<g id="path-nogales-tombstone-elpaso">
+					<path class="st3" d="M120.9,477l27.7,10.1l3.4,5.1l5.8,4.9c0,0,6.3,2.4,8.2,3.8c1.8,1.4,4,3.8,4,3.8l8.3,6.7l4.2,10.5l6.3,14.3
+						L189,552l9.1,22.3l11.8,23.5l3.6,18.1l23.4,2.2l22.1,50.9l-1.6,11.2l15.4,40.6l-21.9,27.5"/>
+				</g>
+				<g id="path-elpaso-tucson-sells">
+					<path class="st3" d="M250.7,748.4l21.9-27.5l-15.4-40.6l1.6-11.2l-22.1-50.9l7.3-21.3l-0.9-7.4l-15.1-14.5l0.3-43.1l-3.5-7.4
+						l-12.4-5.6l-11.5-7.4c0,0-8.6-3.9-9.4-4.4s-5.3-10.6-5.3-10.6l-3.5-15.1l0.6-10.6l6.5-14.8l10.7-9.9l-24-25.3l-19.8-12.7"/>
+				</g>
+				<g id="path-sells-yuma">
+					<path class="st3" d="M156.7,406.3l2.4-35.1c0,0-11.6-37.1-11.5-38.4c0.1-1.3,4.7-10.6,4.7-10.6l23.3-5l15.4-13l18.6-5.6l-9.7-22.1
+						l-13-16.5l-10-19.8l-5.9-13.9l3.8-10"/>
+				</g>
+				<g id="path-yuma-sandiego">
+					<path class="st3" d="M175.3,213c0,0,0.9-13.3,0.9-14.8c0-1.5-2.4-17.7-2.4-17.7l-4.4-15.9L157,138l-8.9-17.4L135.4,81l-6.8-26
+						l-10.3-8"/>
+				</g>
+				<g id="phoenix-text">
+					<g class="st4">
+						<text transform="matrix(1 0 0 1 290.4651 348.3571)" class="st5 st6 st7">Phoenix</text>
+					</g>
+				</g>
+				<g id="phoenix-dot">
+					<g id="step1-dot_9_">
+						<circle class="st8" cx="277" cy="344" r="3.5"/>
+					</g>
+				</g>
+				<g id="nogales-text">
+					<text transform="matrix(1 0 0 1 27.9042 481.3255)" class="st5 st6 st9">Nogales</text>
+					<text transform="matrix(1 0 0 1 38.4042 504.3255)" class="st5 st6 st9">(MEX)</text>
+					<text transform="matrix(1 0 0 1 142.0031 481.8817)" class="st5 st6 st9"> Nogales (USA)</text>
+				</g>
+				<g id="nogales-dot">
+					<g id="step1-dot_2_">
+						<circle class="st10" cx="120.7" cy="475.6" r="7.3"/>
+					</g>
+				</g>
+				<g id="tombstone-text">
+					<text transform="matrix(1 0 0 1 192.0889 514.8159)" class="st11 st6 st7">Tombstone</text>
+				</g>
+				<g id="tombstone-dot">
+					<g id="step1-dot_3_">
+						<circle class="st8" cx="178.4" cy="510.5" r="3.5"/>
+					</g>
+				</g>
+				<g id="elpaso-text">
+					<text transform="matrix(1 0 0 1 170.4007 755.1216)" class="st5 st6 st9">Juarez</text>
+					<text transform="matrix(1 0 0 1 174.2007 779.0216)" class="st5 st6 st9">(MEX)</text>
+					<text transform="matrix(1 0 0 1 270.8035 755.6919)" class="st5 st6 st9">El Paso</text>
+					<text transform="matrix(1 0 0 1 278.9035 779.5919)" class="st5 st6 st9">(USA)</text>
+				</g>
+				<g id="elpaso-dot">
+					<g id="step1-dot">
+						<circle class="st10" cx="248.7" cy="748.2" r="7.3"/>
+					</g>
+				</g>
+				<g id="tucson-text">
+					<g class="st4">
+						<text transform="matrix(1 0 0 1 213.5341 450.7631)" class="st5 st6 st7">Tucson</text>
+					</g>
+				</g>
+				<g id="tucson-dot">
+					<g id="step1-dot_4_">
+						<circle class="st8" cx="200.1" cy="444.9" r="3.5"/>
+					</g>
+				</g>
+				<g id="sells-text">
+					<g class="st4">
+						<text transform="matrix(1 0 0 1 170.8308 412.7429)" class="st5 st6 st7">Sells</text>
+					</g>
+				</g>
+				<g id="sells-dot">
+					<g id="step1-dot_5_">
+						<circle class="st8" cx="157.5" cy="408.3" r="3.5"/>
+					</g>
+				</g>
+				<g id="ajo-text">
+					<g class="st4">
+						<text transform="matrix(1 0 0 1 189.123 320.9916)" class="st5 st6 st7">Ajo</text>
+					</g>
+				</g>
+				<g id="ajo-dot">
+					<g id="step1-dot_1_">
+						<circle class="st8" cx="176.5" cy="316.2" r="3.5"/>
+					</g>
+				</g>
+				<g id="yuma-text">
+					<g class="st4">
+						<text transform="matrix(1 0 0 1 189.1637 219.5013)" class="st5 st6 st7">Yuma</text>
+					</g>
+				</g>
+				<g id="yuma-dot">
+					<g id="step1-dot_7_">
+						<ellipse class="st8" cx="174.5" cy="215.2" rx="3.5" ry="3.5"/>
+					</g>
+				</g>
+				<g id="sandiego-text">
+					<text transform="matrix(1 0 0 1 145.6796 55.2096)" class="st5 st6 st9">San Diego</text>
+					<text transform="matrix(1 0 0 1 165.9796 79.1096)" class="st5 st6 st9">(USA)</text>
+					<text transform="matrix(1 0 0 1 34.1328 53.6955)" class="st5 st6 st9">Tijuana</text>
+					<text transform="matrix(1 0 0 1 39.8328 77.5955)" class="st5 st6 st9">(MEX)</text>
+				</g>
+				<g id="sandiego-dot">
+					<g id="step1-dot_8_">
+						<circle class="st10" cx="119.8" cy="47.7" r="7.3"/>
+					</g>
+				</g>
+			</svg>
+		</div> -->
+		
+		<!-- <div class="overlay">
+			<img class="logo-lt-blanc" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div>  -->
+
+		<header>
+			<div class="header__bg"></div>
+			<div class="header__gradient"></div>
+			
+			<!-- <div class="video-wrapper">
+				<video loop muted>
+				  <source src="https://player.vimeo.com/external/228821812.hd.mp4?s=705dda6bc6f97aa3f364e16dba4f4faca39fb922&profile_id=175" type="video/mp4"> 
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div> -->
+
+			<!-- <div class="smil-wrapper">
+				<div class="layer layer-bg"><img src="img/scene-intro-bg.svg" alt=""></div>
+				<div class="layer layer-clouds"><img src="quoi bon/scene-intro-clouds.svg" alt=""></div>
+				
+				<div class="layer layer-smoke1"><img src="img/scene-intro-smoke1.svg" alt=""></div>
+				<div class="layer layer-smoke2"><img src="img/scene-intro-smoke2.svg" alt=""></div>
+				<div class="layer layer-msc"><img src="img/scene-intro-msc.svg" alt=""></div>
+				<div class="layer layer-speedboat"><img src="img/scene-intro-speedboat.svg" alt=""></div>
+				<div class="layer layer-fishboat"><img src="img/scene-intro-fishboat.svg" alt=""></div>
+			</div> -->
+
+			<div class="header__content">
+				<div class="header__content__container">
+					<div class="header__content__container__box">
+						<h1>Les pesticides, c'est plutôt moche<br><!-- <span></span> --></h1>
+						<!-- <img class="separateur" src="img/separateur.svg" alt=""> -->
+						<h2 class="author">Un reportage de<span> Pascaline Minet</span></h2>	
+						<h2 class="social" >
+							<a target="blank" href="https://www.facebook.com/sharer.php?u={{ app.url }}&display=popup&ref=plugin&src=share_button"><i class="fa fa-facebook"></i></a>
+							<a target="blank" href="https://twitter.com/intent/tweet?text={{ description ~ ' ' ~ app.url ~ ' '|url_encode }}&via=letemps"><i class="fa fa-twitter fa-middle"></i></a>
+							<a target="blank" href="https://www.linkedin.com/shareArticle?url={{ app.url }}&mini=true&title={{ title|url_encode }}&summary={{ description|url_encode }}&source={{ 'Le Temps'|url_encode }}"><i class="fa fa-linkedin"></i></a>
+						</h2>
+					</div>
+				</div>
+			</div> 
+
+			
+
+			<div class="scroll-indicator">
+				<div class="scroll-indicator-inner"></div> 
+			</div>
+
+			<!-- <div class="header-sponsor">
+				<a href="https://www.letemps.ch/partenariats" target="_blank"><span class="charte">[?]</span></a>
+				<a href="https://www.mirabaud.com/fr/" target="_blank"><img src="img/logo-sponsor-only.svg" alt=""></a> 
+				<span>Avec le soutien de </span>
+
+			</div> -->
+		</header>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					Seiko Astron GPS  
+				</div> -->
+			</div>
+		</section>
+
+		<section class="text">
+			<div class="container">
+
+				<h3>
+					Donald Trump veut construire un mur «impénétrable, beau et solide» à la frontière Sud des Etats-Unis. Sur les 3200 kilomètres de démarcation avec le Mexique, un tiers est déjà «barricadé». Voyage dans un monde de migrants, de trafiquants et de séparations. En pleine canicule. 
+				</h3>
+
+				<div class="spacer-small"></div>
+				<div class="spacer-small"></div>
+
+				<h4>
+					Valérie de Graffenried (récit, photos, prises de vue)<br>
+					<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>Xavier Filliez (vidéos)<br>
+					<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span> César Greppin (webdesign)
+				</h4>
+
+				<p>
+					Notre périple avait commencé à Phoenix, la capitale de l’Arizona, avec une petite angoisse. Malgré des contacts répétés avec un porte-parole de la Border Patrol – «Vous savez qu’avec la nouvelle administration il faut entre quatre et six mois pour obtenir l’aval de Washington pour passer une journée avec nous?» –, toujours pas de rendez-vous fixé avec Vicente Paco. Notre interlocuteur était parti en vacances, apparemment sans transmettre le dossier à son collègue, beaucoup moins coopérant. Et puis, soudain, le coup de fil attendu: Vicente Paco!
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						Phoenix, dans les locaux de l'ONG Puente. Peintures murales réalisées par des clandestins.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>DANS LES LOCAUX DE L'ONG PUENTE À PHOENIX.</b> Peintures murales réalisées par des clandestins.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Rendez-vous a été donné à Nogales, sur le parking d’un centre commercial. On file vers la ville, direction sud. Cinq heures de route, avec des cactus à n’en plus finir, une ferme d’autruches, un coyote écrasé et un serpent à sonnette au sort pas plus enviable.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>LES CLANDESTINS</b> ont souvent subi des situations de violence liées aux narcotrafiquants.
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+                <p>
+                	Nogales? L’arrivée dans la ville n’est pas des plus chatoyantes. De larges routes, des hôtels de chaîne, les mêmes que l’on retrouvera tout au long du périple, des fast-foods. On retrouve l'agent, comme prévu, sur un parking, sous une chaleur suffocante. Il est pile à l’heure. Les règles sont strictes: interdiction de monter dans sa Jeep sans le fameux sésame de Washington. On le suit donc avec notre voiture. «Elle est solide? Il va falloir grimper un peu.» En route!
+                </p>	
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout"> 
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>VICENTE PACO</b>, l'agent de la Border Patrol rencontré à Nogales. <i>«Quand je porte l’uniforme, je suis là pour appliquer la loi et servir les Etats-Unis, rien d’autre ne compte.»</i>
+				</div>
+			</div>
+		</section>
+
+		
+		<section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title">Le Mexicain qui chasse les Mexicains</h3>
+				
+				<p>
+					La voilà, la fameuse barrière rouillée qui coupe Nogales en deux. <i>«Vous voyez les traces plus claires sur ces piliers? glisse Vicente Paco. C’est là où des migrants ont glissé pour descendre côté américain.»</i> On se trouve sur un petit monticule où viennent de passer trois biches. De l’autre côté de la barrière qui s’étend à perte de vue, c’est le Mexique.
+				</p>
+
+				<p>
+					Silhouette svelte et regard volontaire, Vicente Paco, 35 ans, la main gauche toujours posée sur son taser, porte l’uniforme vert de la Border Patrol depuis 2010. Dans sa famille, tous se battent pour la sécurité des Etats-Unis, précise-t-il avec fierté. «Mon grand-père a fait la guerre de Corée, mon père le Vietnam et j’ai moi-même servi pendant quatre ans dans le Golfe. Ce sont les attentats du 11 septembre 2001 qui m’ont poussé à m’engager dans la Navy.» Aujourd’hui, sa tâche principale consiste à traquer les migrants clandestins en plein désert de Sonora et à les déporter. Un Mexicain qui chasse les Mexicains? «Mon père est devenu Américain, je le suis aussi. Je suis né au Mexique, mais je suis arrivé aux Etats-Unis à l’âge de 12 ans, légalement», rectifie-t-il. Il ajoute, le regard noir: «Quand je porte l’uniforme, je suis là pour appliquer la loi et servir les Etats-Unis, rien d’autre ne compte.»
+				</p>
+
+			</div>
+		</section>
+
+		<!-- SECTION VIDEO -->
+		<section class="video">
+			<div class="video-wrapper">
+				<div class="trigger"></div>
+				<video controls poster="img/article/poster-paco.png">
+				  <source src="https://player.vimeo.com/external/228667618.hd.mp4?s=492fa574cdd061bc74e9c0d894379d814c6f4016&profile_id=175" type="video/mp4">
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Ici, la barrière s’étend sur 4 kilomètres et fait entre 5 et 8 mètres de hauteur, selon les endroits. Un avant-goût du mur «beau et grand» que Donald Trump veut ériger tout le long de la frontière. Le président américain évalue les coûts de sa construction à 12 milliards de dollars, un rapport du Département de la sécurité évoque le chiffre de 21 milliards. Donald Trump espère envoyer l’essentiel de la facture au président mexicain. «Jamás!» lui a rétorqué ce dernier.
+				</p>
+
+				<p>
+					Un tiers des 3200 kilomètres de frontière sont déjà barricadés. Grâce au Secure Fence Act (2006) signé par George W. Bush dans le sillage des attentats du 11 septembre 2001. Avec l’élection de Donald Trump, la chasse aux clandestins est montée d’un cran. Le président dit vouloir s’en prendre avant tout aux «bad hombres», auteurs de viols, de trafic de drogue et autres délits graves, mais depuis son élection, un homme présent sur sol américain depuis trente ans peut désormais être déporté pour avoir conduit sans permis.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>LA VILLE DE NOGALES</b>, côté américain.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>CE MATIN, UN LAPIN</b>, aperçu près de la frontière.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					A Nogales, la barrière est presque intimidante. Dès qu’on s’éloigne un peu de la ville, elle se transforme en barricade anti-véhicules, plus basse, dont le but premier est d’empêcher les trafiquants de forcer le passage avec leurs pick-up. La zone est ultra-sécurisée. Tours de contrôle, caméras infrarouges et appareils de détection de mouvements au sol permettent à Vicente Paco et à ses collègues d’être alertés à la seconde du moindre passage illégal. Sans oublier les drones et les hélicoptères. Impossible de se promener dans la ville plus de dix minutes sans tomber sur une des fameuses jeeps blanches à larges bandes vertes de la Border Patrol.
+				</p>
+
+				<!-- (EXPERIMENTAL) CITATION DROIT DANS UN PARAGRAPHE. DOIT ETRE DANS UNE SECTION -->
+				<blockquote class="right">
+					<span>Vous voyez les traces plus claires sur ces piliers? glisse Vicente Paco. C’est là où des migrants ont glissé pour descendre côté américain</span>
+					<div class="caption"><b>VICENTE PACO</b>, agent de la Border Patrol</div>
+				</blockquote>
+
+				<p>
+					Vicente Paco s’appuie contre le «mur». «Avant 2010, on ne pouvait pas voir à travers. C’était dangereux. Nos agents étaient parfois la cible de jets de pierres.» Il tait un drame pourtant omniprésent dans la ville. Le 10 octobre 2012, José Antonio Elena Rodriguez, un Mexicain de 16 ans, a été tué par un agent. Lonnie Swartz était du côté américain. Visé avec ses coéquipiers par des pierres, il a tiré à travers les barreaux. Dix balles ont touché José Antonio, qui s’est vidé de son sang, côté mexicain. En 2014, sa mère, excédée par la lenteur de l’enquête, a porté plainte. Le procès ne cesse d’être repoussé.
+				</p>
+
+				<!-- <h3 class="inter-titre title">Beaucoup de mineurs non-accompagnés</h3> -->
+
+				<p>
+					Vicente Paco patrouille seul dans sa Jeep. Dans le secteur de Tucson, détaille-t-il, la Border Patrol dispose de 4000 agents pour surveiller 421 kilomètres de frontière. Ils ont arrêté 64 891 individus d’octobre 2015 à octobre 2016 (415 816 sur l’ensemble du pays). 7989 étaient des mineurs, la très grande majorité (6302) non accompagnés. En 2000, ces chiffres étaient dix fois plus élevés: 616 300 arrestations recensées dans le secteur de Tucson et 1,6 million sur le plan national.
+				</p>
+
+				<p>
+					A sa ceinture, un pistolet, un taser, des menottes, un bâton télescopique, un couteau et des jumelles. A-t-il déjà fait usage de son arme à feu? «Je ne vais pas répondre à cette question. Tout ce que je peux dire, c’est que le recours à la force est parfois nécessaire.»
+				</p>
+				
+			</div>
+		</section>
+
+		<!-- GRANDE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>4000 AGENTS POUR S'OCCUPER DE 421 KM DE FRONTIÈRE.</b> Vicente Paco patrouille cependant toujours seul.
+				</div>
+			</div>
+		</section> 
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					L’effectif des gardes-frontières est passé en quelques années de 10 000 à 21 000 agents. Donald Trump a promis d’en engager 5000 de plus. Les salaires sont attractifs, les conditions de retraite également. Des points indispensables pour limiter les cas de corruption et de collaboration avec les cartels.
+				</p>
+
+				<p>
+					Vicente Paco l’avait dit tout de go: pas question de parler de politique. Il préfère raconter les migrants pourchassés en ville, décrire la partie mexicaine comme un enfer contrôlé par les trafiquants – «N’allez pas côté mexicain seule!» – et évoquer les 115 tunnels rebouchés par ses collègues. Des souterrains surtout utilisés par les trafiquants de drogue, qui se montrent toujours plus inventifs. Quand ils n’utilisent pas des migrants comme mules, il leur arrive de recourir à des catapultes géantes et à des drones. Ils se moquent des barrières. D’ailleurs, ici à Nogales, la plupart des habitants lèvent les yeux au ciel à la seule évocation du mur de Trump. Personne n’y croit vraiment.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>À NOGALES CÔTÉ MEXICAIN</b>, l'ambiance est très différentes
+				</div>
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title">Nogales côté mexicain, le contraste</h3>
+				
+				<p>
+					Le lendemain, après quelques tacos de carne asada et une agua fresca de melón, on file, à pied, découvrir «l’autre Nogales». Pour aller au Mexique, rien de plus simple. Pas de queue et même pas besoin de montrer son passeport. Nogales côté mexicain? Le contraste est saisissant: marchés folkloriques, petite place où les habitants se racontent leur vie, procession funéraire qui avance au rythme d’une batterie endiablée. Et des cliniques dentaires à profusion, très prisées des Américains. Rien à voir avec cette ambiance pesante des patrouilles de gardes-frontières côté Arizona. C’est du moins la toute première impression qui s’en dégage. Car les cartels de la drogue contrôlent la ville. Et dans les foyers d’urgence, les migrants arrivés jusqu’à la frontière – beaucoup viennent d’Amérique centrale – et ceux qui ont déjà été refoulés ont une tout autre image de Nogales-Sonora. Celle d’un rêve brisé.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>SCÈNES DE RUE</b> à Nogales-Sonora.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Un nom résonne en particulier. Celui de Guadalupe Garcia Aguilar. C’est le premier cas de déportation fortement médiatisé depuis que Donald Trump a édicté son décret sur la migration illégale le 25 janvier. Arrêtée en 2008 à Phoenix alors qu’elle travaillait avec un faux numéro de sécurité sociale, elle a été libérée six mois plus tard grâce à l’ONG Puente. A une condition: se présenter chaque année devant des fonctionnaires du «ICE», acronyme de Immigration and Customs Enforcement. Un moment source de stress.
+				</p>
+
+				<!-- <h3 class="inter-titre title">Embarquée dans une camionnette</h3> -->
+
+				<p>
+					Le 8 février, elle s’est donc pliée à ce contrôle de routine. Mais la guerre lancée par Donald Trump contre les clandestins «criminels», y compris ceux qui ont commis de petits délits ou sur lesquels pèsent des soupçons, lui a fait craindre le pire. Elle avait raison. Guadalupe n’est pas ressortie du bâtiment officiel, là où sa famille et des membres de Puente l’attendaient en chantant «No está sola!». Elle a été embarquée dans une camionnette, menottée, et déportée vers Nogales, la ville par laquelle elle était arrivée il y a 21 ans. Ni les cris «Libération, pas déportation!» ni la tentative d’un homme de s’accrocher à une roue de la camionnette n’ont pu empêcher son expulsion. La voilà séparée de son mari et de ses enfants, restés aux Etats-Unis.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- GRANDE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					<b>AU-DEHORS</b> tombe la neige. Une ambiance propice à un travail minutieux dans l'atelier
+				</div> -->
+			</div>
+		</section> 
+
+		<section>
+			<div class="container">
+				
+				<p>
+					«Depuis que Donald Trump est au pouvoir, ce genre de drames est fréquent. Les passeurs ont par ailleurs augmenté les prix pour les migrants», souligne Sergio Garcia, avec son accent chantant. Journaliste, il travaille comme porte-parole pour la municipalité de Nogales-Sonora. La corruption est très présente des deux côtés de la frontière, dit-il, et la guerre contre le narcotrafic est «una farsa». <i>«Comment expliquez-vous que la frontière du pays le plus puissant du monde soit ainsi contrôlée par des groupes armés et des cartels? Les Etats-Unis ont tout intérêt à ce que le trafic de drogue subsiste.»</i>
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>DES CHAUFFEURS DE TAXI</b> attendent à la sortie de la douane, côté mexicain.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Il est temps de retourner côté américain. Passé les petites tracasseries habituelles et le tampon dans le passeport que l’agent peu aimable ne trouvait pas – il était pourtant bien visible –, restait la dernière question: «Et là, vous transportez quoi, dans ce sac?» Moi, sans me rendre tout de suite compte de l’absurdité de la situation: «Oh, juste trois crânes!» Le douanier a vite compris qu’il s’agissait de têtes de mort en céramique richement décorées, un classique de l’artisanat local. Ouf.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>LES HABITANTS DE TOMBSTONE</b> font revivre les années 1880, l'époque de Wyatt Earp. La région vit du tourisme.
+				</div>
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title" id="anim-step2">Avec Wyatt Earp, Billy the Kid et deux trumpistes</h3>
+				
+				<p>
+					Après Nogales, on met le cap sur El Paso, au Texas, et son pendant mexicain, Juarez. Et pour aller à El Paso, un petit détour par Tombstone s’imposait. C’est là que s’est déroulée, en 1881, la fusillade d’OK Corral, le fameux règlement de comptes entre Wyatt Earp, ses frères, Doc Holliday et une bande de coriaces hors-la-loi. On s’y croirait encore. Dans cette bourgade de cow-boys, les habitants vivent à 100% du tourisme. Alors ils font l’effort de s’habiller en vêtements d’époque. Ils le font presque avec naturel. Et puis, il y a des passionnés, capables de commenter pendant des heures, dans deux musées très bien faits, le moindre objet ayant appartenu à Wyatt Earp, Billy the Kid ou Big Nose Kate. On a beau ne pas être passionné par les histoires de westerns, on ne ressort pas tout à fait indemne de cette ville-musée à l’atmosphère si particulière. Est-ce le fait d’avoir dormi dans le bordello de l’époque, dans la chambre de «Scarlet Lady»?
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>DES DIAMANTS</b> sont collés à un cadran.
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Retour à la réalité le lendemain, réveillés par un cri de coyote. Direction la maison de Moe pour le petit-déjeuner. Un sacré personnage, Moe. Tout comme Jane, qui prépare les œufs brouillés et le bacon.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					<b>MOE ET JANE</b>, à Tombstone. <i>«Ce mur avec le Mexique est nécessaire. Ceux qui viennent illégalement profitent de notre système. Ils acceptent des bas salaires et, surtout, ne dépensent rien aux Etats-Unis!».</i>
+				</div> -->
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					 Des trumpistes purs et durs. «Trump est merveilleux, il veut nous remettre au cœur des préoccupations», souligne Jane. «Ce mur avec le Mexique est nécessaire. Ceux qui viennent illégalement profitent de notre système. Ils acceptent des bas salaires et, surtout, ne dépensent rien aux Etats-Unis!» Moe acquiesce. Mais il préfère raconter ses souvenirs d’après-guerre – il était à Berlin en 1953 pour le plan Marshall – et nous montrer sa collection de quartz. Dont un avec une tête d’alligator fossilisée. Jane poursuit sur sa lancée: «Le Mexique doit s’occuper des gens qui veulent émigrer: c’est un pays riche en ressources minières, ils devraient avoir le même niveau que nous.» Elle l’assure, tous les touristes qu’elle a rencontrés à Tombstone trouvent Trump «très bien».
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>COLLECTION DE QUARTZ ET RÉCITS DE GUERRE.</b> Moe raconte ses souvenirs.
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Après la visite de Tombstone, la ville «too tough to die» [trop coriace pour mourir], on continue sur El Paso. Six heures de route en prenant des chemins de traverse. On croise un panneau «Proximité d’une prison, prière de ne pas prendre d’auto-stoppeurs», traverse des vergers de pacaniers (noix de pécan) et une ville qui s’appelle Truth or Consequences.
+				</p>
+
+			</div>
+		</section>
+        
+     	<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos placeat, aut voluptas ducimus earum dolore commodi nam eligendi fugit deleniti laborum,.
+				</div> -->
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title">De El Paso à Juarez</h3>
+				
+				<p>
+					El Paso, bastion démocrate dans un Etat républicain, est, comme Nogales, opposée au projet de mur de Trump. La ville est aujourd’hui considérée comme l’une des plus sûres des Etats-Unis. Ici, la barrière court sur une courte distance. Par endroits, elle s’arrête abruptement, ou présente des «trous», comblés par des jeeps de la Border Patrol postées devant. Un «mur» mité, en somme.
+				</p>
+
+				<!-- ENCART DROIT à L'INTéRIEUR D'UN PARAGRAPHE. DOIT ÊTRE DANS UNE SECTION -->
+				<div class="block-content right">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption"><b>FORTE PRÉSENCE POLICIÈRE À JUAREZ.</b> La ville a longtemps été la plus dangereuse du monde.</div>
+				</div>
+
+				<p>
+					On part rejoindre Juarez à pied. Cette fois, il faut payer 50 cents pour traverser le pont qui enjambe le Rio Bravo. Comme à Nogales, pas de passeport à montrer. De l’autre côté, la ville est très animée, mais avec une forte présence policière. Les agents patrouillent en groupes, à pied, en jeeps et en quads. En tenue de combat, épais gilet pare-balles et armés jusqu’aux dents. Parfois le visage masqué. Là encore, on nous fait comprendre qu’il vaut mieux éviter de s’aventurer dans certains quartiers. On avait d’ailleurs hésité à venir à Juarez. La ville traîne une sale réputation: elle a pendant longtemps été considérée comme la plus dangereuse du monde, minée par une guerre des cartels de la drogue. La «capitale mondiale du meurtre», surtout de femmes. Mais, la veille, deux margaritas ont fini par nous convaincre d’y faire un saut. Ou plutôt le barman José, qui les préparait avec passion. Depuis que l’armée mexicaine est intervenue en 2009 pour tenter de neutraliser membres de cartels et paramilitaires, Juarez n’est plus autant coupe-gorge qu’avant, nous avait-il assuré. Les sicarios, ces tueurs liés aux cartels, font un peu moins parler d’eux.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>DES DIAMANTS</b> sont collés à un cadran.
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Lui-même est arrivé illégalement aux Etats-Unis, il y a vingt ans. «J’étais avec mon oncle. A l’époque, on m’avait juste dit de dire «American!» en passant la douane. Je l’ai fait – je ne connaissais aucun autre mot en anglais – et j’étais aux Etats-Unis! C’était aussi simple que ça. Les temps ont beaucoup changé», lâche-t-il dans un grand éclat de rire.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					<b>VUE D’EXTÉRIEUR DE L’USINE DE PRODUCTION EPSON-SEIKO</b>, à Shiojiri dans la province de Nagano.
+				</div> -->
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Cette fois, le retour côté américain est plus compliqué. Une douanière fronce les sourcils en voyant notre visa de journaliste. Elle abandonne son guichet et nous dirige vers une salle, pour «vérification». Zut. On doit déposer nos affaires à l’entrée, s’asseoir – des menottes sont accrochées à la chaise – et attendre de se faire interroger. Une situation désagréable. Un agent à l’allure bonhomme se pointe, visiblement de bonne humeur. Il n’avait qu’un mot à la bouche: tequila. <i>«Quoi? Vous rentrez du Mexique et vous n’avez même pas acheté de tequila?»</i> Un piège? On bredouille qu’on n’aime pas trop ça. On ne saura jamais si c’était un test ou pas. Prochaine étape: Tucson, et surtout Sells, le chef-lieu de la tribu amérindienne des Tohono O’odham.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>À SELLS</b>, le Coyote Store propose à la fois des bijoux amérindiens, de quoi manger et des couronnes mortuaires.
+				</div>
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title" id="anim-step3">Le dilemme de la tribu des Tohono O’odham</h3>
+				
+				<p>
+					A Sells, les cactus sont plus nombreux que les habitants. C’est ici, en plein désert de Sonora, que les Tohono O’odham («peuple du désert») ont leur gouvernement, leur parlement, leur prison et leur police tribale. Rendez-vous était pris avec Verlon Jose, le numéro deux de la tribu amérindienne. Mais il nous a posé un lapin. On a donc eu droit au chef (chairman), Edward Manuel, un peu moins habitué aux médias.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- SECTION VIDEO -->
+		<section class="video">
+			<div class="video-wrapper">
+				<div class="trigger"></div>
+				<video controls poster="img/article/poster-edward.jpg">
+				  <source src="https://player.vimeo.com/external/228801923.hd.mp4?s=b206fa865449ff2ae17d455d8d35ac36ce9fe2ae&profile_id=175" type="video/mp4">
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Bien décidés à s’opposer au mur de Donald Trump, les Tohono O’odham se trouvent dans une situation particulière: 2000 de leurs 34 000 membres vivent au Mexique. La tribu est coupée en deux. Elle l’est de fait déjà depuis le traité de Gadsden de 1853, mais elle refuse que des blocs de béton concrétisent cette séparation. Certains membres ne pourraient alors même plus honorer la tombe de leurs parents. D’ailleurs, dans leur langue, il n’y a pas de mot pour dire «mur». «Le projet de Donald Trump nous heurte pour des raisons historiques, culturelles, mais aussi spirituelles et environnementales. Et parce que nous n’avons même pas été consultés», dénonce, sur un ton ferme mais calme, Edward Manuel.
+				</p>
+
+				<p>
+					Chez les Tohono, pas de rideau de fer comme à Nogales, mais du sable, des arbustes secs, des montagnes et des canyons. Avec, par endroits, des Normandy-style barriers, des sortes de structures métalliques qui émergent du sable, de quoi empêcher des véhicules de passer. Mais pas les hommes, ni les animaux.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>LES SAGUAROS</b>, ces grands cactus, sont rois dans le désert de Sonora.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>À SELLS</b>, de nombreuses petites tombes le long de la route principale.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Edward Manuel et sa «Nation» ont avalé bien des couleuvres. Ils ne voient pas d’un bon œil la militarisation de la frontière, mais ont dû apprendre à collaborer avec la Border Patrol, déjà bien présente sur les 100 kilomètres de frontière qui passent par leurs terres. Car les cartels de la drogue y sont très actifs. Des membres de la tribu ont été séquestrés et brutalisés. Le chairman parle lentement. <i>«Il y a un cartel en particulier qui contrôle la zone. Nos jeunes sont parfois recrutés. Ce sont des proies faciles: le taux de chômage est élevé dans la tribu. Se voir proposer plusieurs milliers de dollars est très tentant.»</i>
+				</p>
+
+				<p>
+					La réserve est aussi devenue un corridor mortel pour les migrants. Edward Manuel brise un autre tabou. «Si nous en trouvons en difficulté, nous les soignons dans nos hôpitaux, avec l’argent fédéral que nous recevons.» Délicat. Quand des corps sont retrouvés, la police tribale mène des enquêtes et doit transférer les dépouilles à l’institut médico-légal de Tucson pour procéder à des autopsies, coûteuses. Mais parfois, nous dit-on, les dépouilles sont enterrées là où elles sont trouvées, et resteront probablement à jamais anonymes. D’ailleurs, le long de la route qui mène à Sells, nous avons été frappés par le nombre de petites croix fleuries. Des accidents de la route, mais pas seulement. Des clandestins morts déshydratés, aussi.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>LA «WHITE HOUSE» DE SELLS</b>. C'est ici que nous reçoit le chef amérindiens.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>L'ÉCOLE PRIMAIRE</b> des Tohono O'odham.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Le chef évoque un chiffre: la tribu dépense près de 3 millions de dollars par an pour «gérer ces problèmes de frontière», une somme non remboursée par le gouvernement fédéral et à laquelle s’ajoutent les frais médicaux. Alors, forcément, la tentation est grande de vouloir laisser un plus grand champ d’action aux agents de la Border Patrol. Même si leurs courses-poursuites en quad dans le désert brusquent leur quiétude et effraient le gibier qu’ils aiment chasser. C’est le dilemme des Amérindiens: ils veulent conserver leur autonomie et défendre leurs droits, mais la situation tendue les contraint à coopérer avec les forces de sécurité. Au sein de la tribu, des divisions apparaissent, entre les plus frondeurs et les pragmatiques. Mais ils sont au moins unis sur un point: personne ne veut du mur de Trump. «Les 21 tribus de l’Arizona nous soutiennent dans notre combat», insiste le chef.
+				</p>
+
+				<p>
+					Edward Manuel tient à relever les effets positifs de cette coopération: en dix ans le nombre d’arrestations a baissé de 84%. La barrière anti-véhicules installée en 2006 y est pour beaucoup. La police tribale a procédé à 84 186 arrestations dans la réserve en 2006, chiffre qui est tombé à 14 472 en 2016.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					<b>VUE D’EXTÉRIEUR DE L’USINE DE PRODUCTION EPSON-SEIKO</b>, à Shiojiri dans la province de Nagano.
+				</div> -->
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+					
+				<p>
+					Le chef est également préoccupé par l’impact qu’un «vrai mur» aurait sur la migration des animaux. «Et qui a pensé au problème de l’écoulement naturel de l’eau en période de mousson? La nature est la plus forte.» Le porte-parole venu de Tucson acquiesce discrètement. Ce n’est pas un membre de la tribu, mais il a fallu passer par lui pour que les Amérindiens puissent s’exprimer dans un média.
+				</p>
+
+				<p>
+					La problématique des Tohono rappelle celle de propriétaires de terrains privés, du côté du Texas notamment, menacés d’expropriation pour que Donald Trump puisse construire son mur. Plus d’une centaine d’actions en justice ont déjà été lancées. Certains ont accepté des portions de barrière sur leur terrain, en échange de compensations. Et d’un code électronique pour pouvoir franchir le grillage qui s’érige sur leur propriété.
+				</p>
+
+				<p>
+					Edward Manuel semble fatigué. Mais il a encore une chose à dire: il a invité Donald Trump à venir «voir concrètement ce qui se passe du côté de Sells. Il verra bien que ce n’est pas possible de construire un mur ici.» Le président avait accepté l’invitation. Des dates avaient même été fixées. Puis la Maison-Blanche a annulé, sans jamais proposer de nouvelles dates. Pourquoi? Seul Donald Trump le sait.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>LE DESERT DE SONORA</b> est un corridor mortel pour de nombreux migrants.
+				</div>
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title">Les morts qui hantent le désert de Sonora</h3>
+				
+				<p>
+					On continue notre route vers l’ouest, avec un crochet par l’Organ Pipe Cactus National Monument. Le désert de Sonora est d’une beauté insolente. Des drames s’y déroulent pourtant tous les jours, parfois en silence, comme étouffés.
+				</p>
+
+				<p>
+					Le 15 juin, en début de soirée, la Border Patrol a joué une scène digne d’un mauvais film d’action: elle a pris d’assaut un campement humanitaire en plein désert, dans le but de dénicher des clandestins. Et elle en a en trouvé quatre. L’ONG No More Deaths est sous le choc. C’est elle qui gère ce camp un peu spécial, dont le but est de soulager, le temps d’une étape, les migrants qui se lancent dans une traversée périlleuse depuis le Mexique. Une tente, du matériel médical, des lits et beaucoup d’eau, voilà ce qu’elle leur propose.
+				</p>
+
+				<p>
+					«La Border Patrol connaissait l’existence de ce camp et, jusqu’ici, elle tolérait sa présence», explique Chelsea Halstead, qui travaille pour une autre ONG active dans la région. Un accord a été signé en 2013: les agents s’engageaient à ne pas y intervenir. Mais le 15 juin, alors qu’ils traquaient déjà depuis plusieurs jours les clandestins aux abords du camp, ils ont décidé de troquer les goutte-à-goutte contre des menottes. Une quinzaine de jeeps, deux quads et une trentaine d’agents lourdement armés ont investi le camp. Chelsea Halstead: «Les migrants risquent maintenant de penser qu’un piège leur a été tendu. C’est dévastateur pour le travail des humanitaires.»
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>DANS LE ORGAN PIPE CACTUS NATIONAL MONUMENT</b>, un panneau invite à appeler le 911 en cas de mauvaises rencontres.
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					No More Deaths s’attelle depuis treize ans à empêcher que des migrants meurent dans le désert. Des bénévoles vont régulièrement y déposer des réserves d’eau. Depuis 1998, plus de 7000 migrants ont trouvé la mort dans les quatre Etats (Californie, Arizona, Nouveau-Mexique et Texas) qui bordent le Mexique. Environ 3000 ont péri dans le seul désert de Sonora, déshydratés.
+				</p>
+
+				<p>
+					Dans l’Organ Pipe Cactus National Monument, une réserve de biosphère qui abrite d’étonnantes cactées en forme d’orgues, une pancarte avertit les randonneurs: «Contrebande et immigration illégale peuvent être pratiquées ici. Composez le 911 pour signaler toute activité suspecte.» Interrogé, le manager du parc relativise les dangers. Une plaque en marbre devant le centre des visiteurs raconte pourtant une triste histoire. Celle de Kris Eggle, un apprenti ranger, tué à 28 ans par les membres d’un cartel qu’il était en train de poursuivre.
+				</p>
+
+				<p>
+					Ce jour-là, pas loin de la piste, on aperçoit un bout d’habit pris dans les ronces. Par terre, une chaussure, sorte d’espadrille raccommodée, avec le genre de semelles qui ne laisse pas de traces. Celles que privilégient les migrants. Ils les recouvrent parfois avec des bouts de tapis.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>ABANDONNÉS SUR PLACE</b> des vêtements et chaussures sont souvent retrouvés en plein desert.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Pour passer aux Etats-Unis par cette région hostile, les migrants peuvent débourser jusqu’à 6000 dollars. Plus le chemin est périlleux, plus le prix augmente. C’est bien ce que dénoncent les activistes: la militarisation de portions de frontière pousse les migrants à emprunter des chemins toujours plus dangereux, en alimentant l’industrie des «coyotes» – le nom donné aux passeurs –, qui eux-mêmes travaillent parfois main dans la main avec les cartels de la drogue.
+				</p>
+
+				<p>
+					Les «coyotes» abandonnent souvent les migrants en plein désert après avoir empoché l’argent. Ce n’est que la première difficulté à laquelle les clandestins font face. Poursuivis par les agents de la Border Patrol, ils sont parfois également traqués par des milices privées composées d’individus lourdement armés à l’idéologie proche de l’extrême droite qui, souvent, cherchent «à faire justice» eux-mêmes. Quand ils ne tombent pas sur des brigands. Des cas de viols et de meurtres sont signalés. Dans le désert, c’est la loi du plus fort.
+				</p>
+
+				<p>
+					«Chaque jour, entre trente et plusieurs centaines de gens passent par illégalement dans la région», raconte un agent de la Border Patrol, à un checkpoint à la sortie du parc, pendant qu’un chien sniffe l’arrière de la voiture. «Surtout des trafiquants.»
+				</p>
+
+			</div>
+		</section>
+
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>1 POINT ROUGE = 1 MIGRANT MORT</b> Depuis 1981, plus de 2700 morts de migrants ont été rapportées. L'augmentation significative du nombre de décès est à mettre en parrallèle avec la militarisation croissante de la frontière. <br><b>Sources:</b><br>biologicaldiversity.org<br>humaneborders.info
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Chelsea Halstead travaille pour Colibri, un centre qui collabore avec l’institut médico-légal de Tucson. L’ONG s’est donné un but: identifier les corps, donner un nom aux restes humains retrouvés dans le désert. Faire en sorte que «Doe 12-00434» ou «Doe 12-00435» retrouvent enfin leur identité. «Nous avons obtenu l’an dernier l’autorisation de procéder à des tests ADN. Cela simplifie considérablement nos recherches. Avant, on recueillait les informations de familles qui n’ont plus de nouvelles d’un proche, et nous les transmettions aux médecins légistes. Mais s’il n’y avait pas de signalement particulier, comme une caractéristique au niveau de la dentition ou du crâne, c’était comme rechercher une aiguille dans une botte de foin.» En prélevant des échantillons d’ADN chez les familles de disparus, Colibri espère pouvoir identifier des centaines de corps encore anonymes. Un bandana, une poupée, une bible: tous les objets retrouvés dans le désert, à proximité ou non de restes humains – les animaux sauvages sont parfois passés par là –, ont une histoire, que l’ADN peut permettre de reconstituer.
+				</p>
+
+				<p>
+					Mais le centre se heurte parfois à un obstacle: la peur. «Notre travail n’a pas vraiment changé avec l’élection de Donald Trump. Mais les déportations sont plus massives, chaque clandestin se sent potentiellement en danger», précise Chelsea. Une femme a été arrêtée et déportée alors qu’elle subissait une opération pour une tumeur au cerveau, rappelle-t-elle. Autre exemple: une victime de violence conjugale. Son compagnon a dénoncé son statut migratoire, et la voilà expulsée. «Les clandestins sont tétanisés. Ils craignent d’être arrêtés en se rendant chez nous. Une famille de Los Angeles, qui nous avait fourni de l’ADN, nous a appelés pour nous dire qu’un de leur fils a été déporté peu après.»
+				</p>
+
+				<p>
+					Chelsea est encore toute tourneboulée par l’épisode du raid. Dans le désert, quand un migrant parvient à trouver une balise de sauvetage et appelle le 911, il tombe généralement sur la Border Patrol, et pas sur des équipes médicalisées. «Ils veulent nous faire croire qu’ils sauvent des vies, mais ils s’empressent de déporter les migrants. On a même eu droit à une fausse opération de sauvetage par hélicoptère, où un agent de la Border Patrol jouait le rôle d’un migrant!» assure-t-elle.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>PEINTURES MURALES À AJO.</b>
+				</div>
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title" id="anim-step4">A Ajo, on n’aime pas parler de migration illégale</h3>
+				
+				<p>
+					Depuis le parc de cactus, on remonte vers la petite ville d’Ajo. Les gens ne sont pas toujours bavards, ni les journalistes bienvenus. Chez Marcela’s, la Marcela en question, une Mexicaine, n’avait visiblement pas très envie de parler immigration illégale ce jour-là. Sa préoccupation: faire fonctionner son petit restaurant. Elle a trouvé un bon créneau: elle est la seule de la ville à offrir des petits-déjeuners. Alors plutôt que de répondre aux questions, elle file chercher le café. 
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>UN EMPLOYÉ</b> de l’usine de production Epson-Seiko.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>DES DIAMANTS</b> sont collés à un cadran.
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Départ pour Yuma, située à la confluence du Colorado et de la rivière Gila. De l’autre côté de l’eau, le Mexique. Après avoir fait un tour en ville et tenté d’approcher le mur – le nombre de sens interdits nous fait faire des kilomètres –, on descend vers Gadsden. Là, à force de chercher à approcher la barricade, on l’a vue de très près, en empruntant, sans le remarquer tout de suite, un chemin totalement interdit. D’ailleurs, à cet endroit, le «mur» s’est arrêté sec au bout de quelques centaines de mètres. 
+				</p>
+
+			</div>
+		</section>
+
+		<!-- PETITE IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery small">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					<b>VUE D’EXTÉRIEUR DE L’USINE DE PRODUCTION EPSON-SEIKO</b>, à Shiojiri dans la province de Nagano.
+				</div> -->
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Plus rien. Ou plutôt si: du sable, des ronces et des pierres. Plus loin, la barricade se dédouble. A un endroit, elle jouxte une place de jeu, qui semble laissée à l’abandon.
+				</p>
+
+			</div>
+		</section>
+        
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<!-- <div class="caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos placeat, aut voluptas ducimus earum dolore commodi nam eligendi fugit deleniti laborum,.
+				</div> -->
+			</div>
+		</section>
+        
+        <section class="">
+			<div class="container">
+
+				<h3 class="inter-titre title" id="anim-step5">A San Diego, le «mur» se jette dans le Pacifique</h3>
+
+				<p>
+					On décide un peu plus tard de poursuivre l’aventure jusqu’à San Diego. La route est presque droite. On traverse le désert de Yuha, des montagnes rocheuses, des réserves amérindiennes, des champs d’éoliennes et des parcs de panneaux solaires. Avec un détour par Calexico – contraction de «California» et de «Mexico» – pour avaler deux-trois tacos. En face, son pendant, Mexicali, mariage entre «Mexico» et «California». A Calexico, on a beau être encore aux Etats-Unis, l’espagnol domine. Dans la petite gargote choisie pour midi, l’ambiance est étrange. Les clients ont tous des visages boursouflés et tristes.
+				</p>
+				
+				<p>
+					L’entrée à San Diego est impressionnante, avec ses autoroutes à voies multiples. Ici, le «mur» se jette dans le Pacifique. On parque la voiture dans le Border State Park, et c’est parti pour 30 minutes de marche sous un soleil cuisant. Une pancarte avertit de la présence de serpents à sonnette. Très vite, un bruit sourd et répétitif: les pales d’hélicoptères, qui font d’incessants va-et-vient. On se trouve dans une réserve naturelle. Au bout de quelques minutes, la plage. Elle est déserte. On se dirige vers la palissade rouillée. Le sable est brûlant. Le bruit des vagues est couvert par celui des hélicoptères. Et par la musique qui émane de la jeep d’un agent de la Border Patrol, posté face au Mexique. Pas vraiment de quoi inspirer les Californiens: ils ont de belles plages un peu plus loin, sans barbelés, sans panneaux leur indiquant de ne pas s’approcher de la palissade, sans caméra qui enregistre leurs faits et gestes. De l’autre côté, à Tijuana, c’est le contraste: des familles et des chiens profitent de la plage, presque accolés aux longues barres rouillées. Un pélican passe nonchalamment au-dessus de la barrière.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					{# <div class="caption">
+						<b>TIJUANA</b>, de l'autre côté de la barrière.
+					</div> #}
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>TIJUANA</b>, de l'autre côté de la barrière.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				
+				<p>
+					Le week-end, l’ambiance est un peu différente. Le parc de l’Amitié, qui porte aujourd’hui très mal son nom, ouvre pendant quelques heures, de 10 à 14 heures. C’est là que des familles, sous l’étroite surveillance de la Border Patrol, peuvent, l’espace de quelques instants, franchir la première barrière côté américain, se retrouver dans le no man’s land qui sert de passage pour les jeeps des gardes-frontières, et se diriger vers la deuxième. Pour enfin pouvoir, à travers un grillage, toucher, embrasser leurs proches. C’est le sort de familles séparées par la politique migratoire.
+				</p>
+				
+			</div>
+		</section>
+
+		<!-- 2 IMAGES CÔTE à CÔTE ENTRE 2 PARAGRAPHES -->
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>À SAN DIEGO</b>, la zone frontière est ultra-militarisée.
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>SOUS LA SURVEILLANCE DE LA BORDER PATROL</b>, des familles séparées se retrouvent le week-end dans le «Parc de l'Amitié».
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+				
+				<p>
+					Ce parc a été inauguré en 1971 par l’épouse du président Richard Nixon. Jusqu’à mi-2009, il était possible de s’étreindre et de se passer des objets, presque sans restriction. Puis, le parc a fermé, le temps de construire une nouvelle barrière, en acier cette fois, de 6 mètres de haut. Il a rouvert en 2012. Ses environs sont désormais quadrillés en permanence par des agents de la Border Patrol. En jeeps, en quads et à cheval. C’est devenu l’une des portions de frontière les plus surveillées des Etats-Unis. Avec Donald Trump, elle pourrait le devenir encore plus.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- SECTION VIDEO -->
+		<section class="video special">
+			<div class="video-wrapper" style="max-width: 100%;">
+				<div class="trigger"></div>
+				<video loop muted autoplay poster="img/article/poster-flotte.jpg" style="padding-left: 0;">
+				  <source src="https://player.vimeo.com/external/228821318.sd.mp4?s=e3cfd299e6e1ab469cad2394de3cec603bbaf021&profile_id=165" type="video/mp4">
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+		</section>
+
+		<!-- HERO IMAGE ENTRE 2 PARAGRAPHES -->
+		<!-- <section class="gallery hero">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/accueil-placeholder.jpg">
+				<div class="caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos placeat, aut voluptas ducimus earum dolore commodi nam eligendi fugit deleniti laborum,.
+				</div>
+			</div>
+		</section>
+        
+        <section class="padding-bottom">
+			<div class="container">
+
+				<h3 class="inter-titre title">Sur la piste des jaguars</h3>
+				
+				<p>
+					La construction du mur «impénétrable, beau et solide» de Trump aurait des conséquences désastreuses sur l’écosystème, avertissent les scientifiques. Les rares jaguars mexicains venus aux Etats-Unis pourraient en pâtir. Et en matière de jaguars, Mayke et Chris Bugbee en connaissent un rayon.
+				</p>
+
+				<p>
+					Mayke est un berger malinois femelle. Elle était censée faire carrière dans la traque aux narcotrafiquants, détecter drogues et explosifs, mais la Border Patrol n’en a pas voulu: la chienne a peur des gros camions. Peu importe: Mayke a aujourd’hui une existence bien plus fascinante. Repérée par le biologiste Chris Bugbee, elle a été formée pour surveiller un autre type de clandestin venu tout droit du Mexique: El Jefe. L'un des rares jaguars à avoir foulé le sol américain.
+				</p>
+
+				<p>
+					El Jefe («le chef») vient probablement de la Sierra Madre, une chaîne de montagnes du nord du Mexique. La dernière fois qu’il a été filmé aux Etats-Unis – il lui arrive de se faire avoir par des pièges photographiques –, c’était en octobre 2015. Depuis, plus rien. A-t-il été tué, braconné par des chasseurs? Ou est-il reparti au Mexique, à la recherche d’une femelle? Aucune piste n’est à écarter.
+				</p>
+
+				<p>
+					Une chose est sûre: El Jefe est un jaguar malin. Chris Bugbee ne l’a jamais vu. Grâce à Mayke, il a trouvé des traces de sa présence – des excréments, des restes de mouffettes où tout a été dévoré sauf les glandes anales, et même un crâne d’ours avec les traces de dents d’un jaguar, peut-être les siennes –, mais n’a jamais croisé son regard. «El Jefe est très prudent. Il nous a probablement observés pendant des missions. Il est arrivé qu’il apparaisse sur des images de caméras à peine 12 minutes après mon passage, raconte Chris Bugbee. Ma chienne, par contre, l’a probablement vu. Un jour, elle s’est brusquement immobilisée sur ses pattes, comme tétanisée par la peur. Elle est venue se cacher derrière mes jambes. Je suis presque sûr que c’était lui. Cela devait en tout cas être quelque chose d’incroyable!»
+				</p>
+
+				<p>
+					Auteur d’un mémoire de master consacré aux alligators, Chris Bugbee s’est installé à Tucson avec sa femme, qui s’est, elle, spécialisée dans les ours noirs, puis les félins. Il a d’abord entraîné des chiens à ne pas attaquer des serpents à sonnette. Puis il s’est pris de passion pour les jaguars et s’est intéressé de près à El Jefe, qui rôdait pas loin. Ni une, ni deux, il décide de faire de Mayke le premier chien spécialisé dans la détection de ces félins aux Etats-Unis. Il l’entraîne avec de l’excrément de jaguar récupéré d’un zoo. Tous deux se mettent ensuite sur la piste d’El Jefe pendant quatre ans, dans le cadre d’un projet de l’Université de l’Arizona, dont le but est de surveiller les effets sur la faune de la construction de premières portions de palissades de long de la frontière.
+				</p>
+
+				<p>
+					En été 2015, le projet prend fin, mais Chris Bugbee veut continuer. Il finit par obtenir le soutien du Center for Biological Diversity. Grâce à ses pièges photographiques, il réussit à cerner les habitudes d’El Jefe. Des images censées rester discrètes et utilisées uniquement à des fins scientifiques, jusqu’à ce que Chris Bugbee décide de les rendre publiques, sans demander l’avis de ses anciens chefs ni celui des agences fédérales associées au projet, «qui de toute façon ne font rien pour préserver les jaguars». Il avait hésité. Le risque en révélant l’existence d’El Jefe est d’éveiller la curiosité de braconniers.
+				</p>
+
+				<p>
+					Mais Chris veut sensibiliser l’opinion publique à la nécessité de protéger cette espèce, qui revient progressivement aux Etats-Unis. Car le mur de Donald Trump la menace. Tout comme le projet d’exploitation d’une mine de cuivre, pile-poil sur le territoire d’El Jefe. En février 2016, il diffuse donc une vidéo de 41 secondes qui montre «l’unique jaguar aux Etats-Unis». C’est le buzz immédiat. La vidéo a été visionnée des dizaines de millions de fois. Du côté de l’Université de l’Arizona et du Service américain de la pêche et de la faune, l’heure est par contre à la soupe à la grimace. Chris Bugbee est sommé de rendre son matériel et son véhicule.
+				</p>
+
+				<p>
+					«Je ne regrette pas d’avoir diffusé la vidéo, souligne aujourd’hui Chris Bugbee. L’opinion publique doit être alertée de l’importance de protéger cette espèce. C’est incroyable de les voir revenir, peut-être poussés vers le nord à cause des changements climatiques. Dans les années 1900-1920, il existait un programme d’éradication de ces prédateurs. La population des jaguars aux Etats-Unis a presque été entièrement décimée vers 1970.» Il ajoute: «Mais avec le projet de Trump, ce serait clairement la fin de l’histoire du retour des jaguars aux Etats-Unis.»
+				</p>
+
+				<p>
+					Le dernier jaguar femelle recensé aux Etats-Unis a été tué dans l’Arizona en 1963. Depuis, les jaguars observés dans le pays se font rares. Ces vingt dernières années, sept jaguars ont été aperçus. Les deux derniers ont été photographiés récemment, l’un d’eux en décembre 2016 dans les montagnes Huachuca. Juste au nord d’une petite portion de frontière sans barricade.
+				</p>
+
+				<p>
+					Les jaguars de Sonora et les ocelots ne seraient pas les seuls animaux affectés par la construction d’un mur. Beaucoup d’espèces migrent naturellement entre les deux pays. Des coyotes, des ours, des lynx, des cougars, des antilopes ou des mouflons. Ou encore les rares loups gris du Mexique. Même des animaux de très petite taille, comme le hibou pygmée, des tortues, des grenouilles ou des papillons risquent d’être touchés. Les animaux volants pourraient être gênés par des radars et des installations lumineuses, qui font partie des méthodes de détection de passages illégaux de migrants ou de trafiquants.
+				</p>
+
+				<p>
+					Chris Bugbee continue de se promener sur les terres d’El Jefe dans l’Arizona, dans l’espoir de retrouver, un jour, des signes de sa présence. Quant à Mayke, elle pourrait bientôt avoir une nouvelle mission: «Je vais probablement l’entraîner à trouver des ocelots. Eux aussi commencent à remonter depuis le Mexique.»
+				</p>
+
+			</div>
+		</section> -->
+
+		<section class="encart odd padding-bottom">
+			<div class="container">
+
+				<h3>Sur la piste des jaguars</h3>
+				
+				<h4>La construction du mur «impénétrable, beau et solide» de Trump aurait des conséquences désastreuses sur l’écosystème, avertissent les scientifiques. Les rares jaguars mexicains venus aux Etats-Unis pourraient en pâtir. Et en matière de jaguars, Mayke et Chris Bugbee en connaissent un rayon.</h4>
+
+				<p>
+					Mayke est un berger malinois femelle. Elle était censée faire carrière dans la traque aux narcotrafiquants, détecter drogues et explosifs, mais la Border Patrol n’en a pas voulu: la chienne a peur des gros camions. Peu importe: Mayke a aujourd’hui une existence bien plus fascinante. Repérée par le biologiste Chris Bugbee, elle a été formée pour surveiller un autre type de clandestin venu tout droit du Mexique: El Jefe. L'un des rares jaguars à avoir foulé le sol américain.
+				</p>
+
+				<p>
+					El Jefe («le chef») vient probablement de la Sierra Madre, une chaîne de montagnes du nord du Mexique. La dernière fois qu’il a été filmé aux Etats-Unis – il lui arrive de se faire avoir par des pièges photographiques –, c’était en octobre 2015. Depuis, plus rien. A-t-il été tué, braconné par des chasseurs? Ou est-il reparti au Mexique, à la recherche d’une femelle? Aucune piste n’est à écarter.
+				</p>
+
+				<p>
+					Une chose est sûre: El Jefe est un jaguar malin. Chris Bugbee ne l’a jamais vu. Grâce à Mayke, il a trouvé des traces de sa présence – des excréments, des restes de mouffettes où tout a été dévoré sauf les glandes anales, et même un crâne d’ours avec les traces de dents d’un jaguar, peut-être les siennes –, mais n’a jamais croisé son regard. «El Jefe est très prudent. Il nous a probablement observés pendant des missions. Il est arrivé qu’il apparaisse sur des images de caméras à peine 12 minutes après mon passage, raconte Chris Bugbee. Ma chienne, par contre, l’a probablement vu. Un jour, elle s’est brusquement immobilisée sur ses pattes, comme tétanisée par la peur. Elle est venue se cacher derrière mes jambes. Je suis presque sûr que c’était lui. Cela devait en tout cas être quelque chose d’incroyable!»
+				</p>
+
+				<p>
+					Auteur d’un mémoire de master consacré aux alligators, Chris Bugbee s’est installé à Tucson avec sa femme, qui s’est, elle, spécialisée dans les ours noirs, puis les félins. Il a d’abord entraîné des chiens à ne pas attaquer des serpents à sonnette. Puis il s’est pris de passion pour les jaguars et s’est intéressé de près à El Jefe, qui rôdait pas loin. Ni une, ni deux, il décide de faire de Mayke le premier chien spécialisé dans la détection de ces félins aux Etats-Unis. Il l’entraîne avec de l’excrément de jaguar récupéré d’un zoo. Tous deux se mettent ensuite sur la piste d’El Jefe pendant quatre ans, dans le cadre d’un projet de l’Université de l’Arizona, dont le but est de surveiller les effets sur la faune de la construction de premières portions de palissades de long de la frontière.
+				</p>
+
+				<p>
+					En été 2015, le projet prend fin, mais Chris Bugbee veut continuer. Il finit par obtenir le soutien du Center for Biological Diversity. Grâce à ses pièges photographiques, il réussit à cerner les habitudes d’El Jefe. Des images censées rester discrètes et utilisées uniquement à des fins scientifiques, jusqu’à ce que Chris Bugbee décide de les rendre publiques, sans demander l’avis de ses anciens chefs ni celui des agences fédérales associées au projet, «qui de toute façon ne font rien pour préserver les jaguars». Il avait hésité. Le risque en révélant l’existence d’El Jefe est d’éveiller la curiosité de braconniers.
+				</p>
+
+				<p>
+					Mais Chris veut sensibiliser l’opinion publique à la nécessité de protéger cette espèce, qui revient progressivement aux Etats-Unis. Car le mur de Donald Trump la menace. Tout comme le projet d’exploitation d’une mine de cuivre, pile-poil sur le territoire d’El Jefe. En février 2016, il diffuse donc une vidéo de 41 secondes qui montre «l’unique jaguar aux Etats-Unis». C’est le buzz immédiat. La vidéo a été visionnée des dizaines de millions de fois. Du côté de l’Université de l’Arizona et du Service américain de la pêche et de la faune, l’heure est par contre à la soupe à la grimace. Chris Bugbee est sommé de rendre son matériel et son véhicule.
+				</p>
+
+				<p>
+					«Je ne regrette pas d’avoir diffusé la vidéo, souligne aujourd’hui Chris Bugbee. L’opinion publique doit être alertée de l’importance de protéger cette espèce. C’est incroyable de les voir revenir, peut-être poussés vers le nord à cause des changements climatiques. Dans les années 1900-1920, il existait un programme d’éradication de ces prédateurs. La population des jaguars aux Etats-Unis a presque été entièrement décimée vers 1970.» Il ajoute: «Mais avec le projet de Trump, ce serait clairement la fin de l’histoire du retour des jaguars aux Etats-Unis.»
+				</p>
+
+				<p>
+					Le dernier jaguar femelle recensé aux Etats-Unis a été tué dans l’Arizona en 1963. Depuis, les jaguars observés dans le pays se font rares. Ces vingt dernières années, sept jaguars ont été aperçus. Les deux derniers ont été photographiés récemment, l’un d’eux en décembre 2016 dans les montagnes Huachuca. Juste au nord d’une petite portion de frontière sans barricade.
+				</p>
+
+				<p>
+					Les jaguars de Sonora et les ocelots ne seraient pas les seuls animaux affectés par la construction d’un mur. Beaucoup d’espèces migrent naturellement entre les deux pays. Des coyotes, des ours, des lynx, des cougars, des antilopes ou des mouflons. Ou encore les rares loups gris du Mexique. Même des animaux de très petite taille, comme le hibou pygmée, des tortues, des grenouilles ou des papillons risquent d’être touchés. Les animaux volants pourraient être gênés par des radars et des installations lumineuses, qui font partie des méthodes de détection de passages illégaux de migrants ou de trafiquants.
+				</p>
+
+				<p>
+					Chris Bugbee continue de se promener sur les terres d’El Jefe dans l’Arizona, dans l’espoir de retrouver, un jour, des signes de sa présence. Quant à Mayke, elle pourrait bientôt avoir une nouvelle mission: «Je vais probablement l’entraîner à trouver des ocelots. Eux aussi commencent à remonter depuis le Mexique.»
+				</p>
+
+			</div>
+		</section>
+		
+		<footer>
+			<!-- <hr class="end"> -->
+			<div class="container">
+
+				<h5>Nos grands formats</h5>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2017/bol-dor-mirabaud-epopee-technologique/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-boldor.jpg');"></div>
+							<div class="caption">Le Bol d'Or, une épopée technologique</div>
+						</div>
+					</a>
+
+					<a href="https://labs.letemps.ch/interactive/2016/longread-parc-adula/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_adula.jpg');"></div>
+							<div class="caption">Parc Adula: Bataille dans la montagne</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="row">
+				<a href="https://labs.letemps.ch/interactive/2016/longread-fioul-lourd/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_fioul.jpg');"></div>
+							<div class="caption">Fioul lourd, le sang impur de la globalisation</div>
+						</div>
+					</a>
+
+					<a href="https://labs.hebdo.ch/interactive/2016/longread-horlogerie-japonaise/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-horlogerie-japonaise.jpg');"></div>
+							<div class="caption">Horlogerie japonaise – A la conquête du monde</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2016/longread-gothard/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_gothard.jpg');"></div>
+							<div class="caption">Les oubliés du Gothard</div>
+						</div>
+					</a>
+					<a href="https://labs.letemps.ch/interactive/2016/tchernobyl-30-ans/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-tchernobyl.jpg');"></div>
+							<div class="caption">30 ans après, voyage au cœur de la zone </div>
+						</div>
+					</a>
+				</div>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2016/shenzhen/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_shenzhen.jpg');"></div>
+							<div class="caption">Shenzhen, de la fumée des usines aux ateliers d'artistes</div>
+						</div>
+					</a>
+					<a href="https://labs.letemps.ch/interactive/2016/montre-suisse/" target="blank" class="footer__link">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-montre.jpg');"></div>
+							<div class="caption">Comment j'ai fabriqué ma montre en 8 heures</div>
+						</div>
+					</a>
+					
+				</div>
+
+			</div>
+
+			<div class="credits">
+				Textes et prises de vue: Valérie de Graffenried<br>
+				Vidéos: Xavier Filliez<br>
+				Webdesign: César Greppin
+			</div>
+		</footer>
+		
+		{{ block('footer_brand') }}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>-->
+        <script src="js/jquery.lazyload.js?v=1.9.7"></script>
+        <script src="js/intro-control.js"></script>
+        <script src="js/viewport.js"></script>
+        <!--<script src="js/timeline-control.js"></script>-->
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/timeline.js"></script>
+        <script src="js/video-control.js"></script>
+        <script src="js/map-anim.js"></script>
+        <!--<script src="js/hero-control.js"></script>-->
+        <script src="js/zoom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+	</body>
+</html>
