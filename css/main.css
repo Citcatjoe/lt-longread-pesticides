@@ -1294,187 +1294,74 @@ section .video-wrapper {
     section .video-wrapper.video-fullscreen video {
       padding-lefT: 0 !important; }
 
-section.animation {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  overflow: visible !important;
-  padding-top: 0;
-  transform: translate3d(0, 0, 0);
-  position: relative; }
-  @media (max-width: 1200px) {
-    section.animation {
-      width: 100% !important; } }
-  section.animation .container {
-    width: 100%;
-    max-width: 1120px;
-    padding: 2rem 0 2rem 0;
-    position: absolute;
-    left: 50%;
+section.scene {
+  height: 100vh; }
+  section.scene .layout {
+    position: relative;
+    padding-bottom: 35px;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-    @media (max-width: 1200px) {
-      section.animation .container {
-        width: 90%; } }
-    @media (max-width: 500px) {
-      section.animation .container {
-        top: 0;
-        -webkit-transform: translate(-50%, 0);
-        -moz-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
-        transform: translate(-50%, 0); } }
-    section.animation .container div.top {
-      width: 100%; }
-      section.animation .container div.top img {
-        width: 100%; }
-      section.animation .container div.top svg {
-        width: 100%;
-        height: auto; }
-        section.animation .container div.top svg .ship-done {
-          -webkit-transform: translateX(405%);
-          -moz-transform: translateX(405%);
-          -ms-transform: translateX(405%);
-          -o-transform: translateX(405%);
-          transform: translateX(405%); }
-    section.animation .container div.left {
-      width: 50%;
-      height: 400px;
-      border-right: 1px solid #b3b2b2;
-      float: left;
-      text-align: right;
-      padding: 2rem 4rem 2rem 2rem; }
-      @media (max-width: 992px) {
-        section.animation .container div.left {
-          width: 100%;
-          height: 276px;
-          border-right: 0;
-          text-align: left;
-          padding: 2rem 0 0 0; } }
-      @media (max-width: 500px) {
-        section.animation .container div.left {
-          height: 220px; } }
-      @media screen and (max-width: 350px) {
-        section.animation .container div.left {
-          height: 180px; } }
-    section.animation .container div.right {
-      width: 50%;
-      height: 400px;
-      float: left;
-      padding: 2rem 2rem 2rem 4rem;
-      position: relative;
-      overflow: hidden; }
-      @media (max-width: 992px) {
-        section.animation .container div.right {
-          width: 100%;
-          padding: 0 0 2rem 0; } }
-      section.animation .container div.right div.shiptext {
-        position: absolute;
-        height: 100%;
-        background: white; }
-        @media screen and (max-width: 350px) {
-          section.animation .container div.right div.shiptext p {
-            font-size: 13px; } }
-    section.animation .container div.bartitle {
-      font-family: 'Roboto';
-      font-weight: 400;
-      font-size: 16px;
-      margin: 0 0 15px 0;
-      color: #807f7f;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
-      @media screen and (max-width: 350px) {
-        section.animation .container div.bartitle {
-          font-size: 13px;
-          margin: 0 0 5px 0; } }
-    section.animation .container div.steptitle {
-      font-family: 'Roboto';
-      font-weight: 500;
-      font-size: 38px;
-      margin: 0 0 15px 0;
-      color: black; }
-      @media (max-width: 500px) {
-        section.animation .container div.steptitle {
-          font-size: 20px; } }
-    section.animation .container p {
-      font-family: 'Roboto';
-      line-height: 1.6; }
-    section.animation .container div.bar1 {
-      position: relative;
-      width: 0;
-      height: 50px;
-      margin: 0 0 20px auto;
-      background: #4a6789; }
-      @media (max-width: 992px) {
-        section.animation .container div.bar1 {
-          margin: 0 auto 20px 0; } }
-      @media (max-width: 500px) {
-        section.animation .container div.bar1 {
-          height: 30px;
-          -webkit-transform: scale(0.6);
-          -moz-transform: scale(0.6);
-          -ms-transform: scale(0.6);
-          -o-transform: scale(0.6);
-          transform: scale(0.6);
-          -webkit-transform-origin: left center;
-          -moz-transform-origin: left center;
-          -ms-transform-origin: left center;
-          -o-transform-origin: left center;
-          transform-origin: left center; } }
-    section.animation .container div.bar2 {
-      position: relative;
-      width: 0;
-      height: 50px;
-      margin: 0 0 20px auto;
-      background: #4a6789; }
-      @media (max-width: 992px) {
-        section.animation .container div.bar2 {
-          margin: 0 auto 20px 0; } }
-      @media (max-width: 500px) {
-        section.animation .container div.bar2 {
-          height: 30px;
-          -webkit-transform: scale(0.6);
-          -moz-transform: scale(0.6);
-          -ms-transform: scale(0.6);
-          -o-transform: scale(0.6);
-          transform: scale(0.6);
-          -webkit-transform-origin: left center;
-          -moz-transform-origin: left center;
-          -ms-transform-origin: left center;
-          -o-transform-origin: left center;
-          transform-origin: left center; } }
-      @media screen and (max-width: 350px) {
-        section.animation .container div.bar2 {
-          font-size: 13px; } }
-    section.animation .container span {
+    transform: translateY(-50%); }
+    section.scene .layout .scene-progress {
       position: absolute;
-      font-family: 'Roboto';
-      font-size: 43px;
-      font-weight: 500;
-      top: 50%;
-      left: 0;
-      -webkit-transform: translate(-105%, -50%);
-      -moz-transform: translate(-105%, -50%);
-      -ms-transform: translate(-105%, -50%);
-      -o-transform: translate(-105%, -50%);
-      transform: translate(-105%, -50%);
-      display: block; }
-      @media (max-width: 992px) {
-        section.animation .container span {
-          left: auto;
-          right: 0;
-          -webkit-transform: translate(105%, -50%);
-          -moz-transform: translate(105%, -50%);
-          -ms-transform: translate(105%, -50%);
-          -o-transform: translate(105%, -50%);
-          transform: translate(105%, -50%); } }
-      @media (max-width: 500px) {
-        section.animation .container span {
-          font-size: 35px; } }
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 5px;
+      background: #f3f3f3; }
+  section.scene .scene-text {
+    padding: 0 15px;
+    margin-right: 0 !important; }
+    section.scene .scene-text .scene-text-bullet {
+      background: #C0656D;
+      color: white;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+      margin-right: 15px; }
+  section.scene .inter-titre {
+    text-align: center; }
+  section.scene p {
+    text-align: center; }
+
+.scroll-downs {
+  transform-origin: 50% 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 34px;
+  height: 55px; }
+
+.mousey {
+  width: 3px;
+  padding: 10px 16px 10px 13px;
+  height: 55px;
+  border: 2px solid #93b871;
+  border-radius: 25px;
+  opacity: 0.75; }
+
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #93b871;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite; }
+
+@keyframes scroll {
+  0% {
+    opacity: 0; }
+  10% {
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    transform: translateY(15px);
+    opacity: 0; } }
 
 section.citern {
   width: 100%;

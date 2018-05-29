@@ -17,10 +17,10 @@ jQuery(document).ready(function($)
 
 //ytp-thumbnail-overlay-image
 
-	setTimeout(function() 
-	{
-		$('footer').nextAll('div').css('display', 'none');
-	}, 5000);
+	// setTimeout(function() 
+	// {
+	// 	$('footer').nextAll('div').css('display', 'none');
+	// }, 5000);
 
 	$(".owl").owlCarousel({
 	    items : 1,

@@ -2041,6 +2041,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/article\/scene.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/article\/scene.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/article\/sonora1.jpg": {
 		"ft": 16384,
 		"iS": 447672,
@@ -2448,12 +2458,12 @@
 		"oAP": "\/indexH.php",
 		"oF": 0
 		},
-	"\/js\/animation-citern.js": {
+	"\/js\/animation-citern-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/animation-citern-min.js",
+		"oAP": "\/js\/animation-citern-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2464,6 +2474,26 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/animation-control-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/animation-pesticides-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/animation-pesticides-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/animation-pesticides.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/animation-pesticides-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2727,6 +2757,17 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/prod\/2080039-une-silhouette-de-l-homme-masque-de-pompage-de-pesticides-dans-le-domaine-.jpg": {
+		"ft": 16384,
+		"iS": 81435,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/prod\/2080039-une-silhouette-de-l-homme-masque-de-pompage-de-pesticides-dans-le-domaine-.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/prod\/42289570-man-flottant-sur-la-rivière-en-kayaks-paysage-de-montagnes-et-de-tente-l-été-design-plat-illustration (1).jpg": {
 		"ft": 16384,
 		"iS": 116092,
@@ -2859,6 +2900,17 @@
 		"oA": 2,
 		"oAP": "\/prod\/scene.ai",
 		"oF": 0
+		},
+	"\/prod\/stock-vector-farmer-sprays-pesticide-vector-illustration-608381921.jpg": {
+		"ft": 16384,
+		"iS": 46005,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/prod\/stock-vector-farmer-sprays-pesticide-vector-illustration-608381921.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/social.jpg": {
 		"ft": 16384,
