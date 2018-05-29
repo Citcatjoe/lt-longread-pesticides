@@ -76,9 +76,9 @@ header
 			top: 0;
 			width: 100%;
 			
-			@include breakpoint(lg) {   
-				display: none;  
-			}
+			// @include breakpoint(lg) {   
+			// 	display: none;  
+			// }
 		}
 	}
 

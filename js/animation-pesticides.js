@@ -69,6 +69,18 @@ jQuery(document).ready(function($)
     // init controller
     var controller = new ScrollMagic.Controller();
     var step = 1000;
+    var textTitle0 = "Title 0";
+    var textContent0 = "Content 0";
+    var textTitle1 = "Title 1";
+    var textContent1 = "Content 1";
+    var textTitle2 = "Title 2";
+    var textContent2 = "Content 2";
+    var textTitle3 = "Title 3";
+    var textContent3 = "Content 3";
+    var textTitle4 = "Title 4";
+    var textContent4 = "Content 4";
+    var textTitle5 = "Title 5";
+    var textContent5 = "Content 5";
     
     // build scene
 	new ScrollMagic.Scene({
@@ -259,9 +271,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
           if (e.type == 'end') {
               if (e.target.controller().info('scrollDirection') === 'REVERSE') {
-                  $sceneTextTitle.text("Les pesticides contaminent l'environnement");
+                $sceneTextTitle.text(textTitle0);
+                $sceneTextContent.text(textContent0);
               }else{
-                $sceneTextTitle.text("BANANAS");
+                $sceneTextTitle.text(textTitle1);
+                $sceneTextContent.text(textContent1);
               }
           }
       })
@@ -356,6 +370,17 @@ jQuery(document).ready(function($)
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
       .offset(step * 12) //tip top
+      .on('start end', function (e) {
+        if (e.type == 'end') {
+          if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextTitle.text(textTitle1);
+            $sceneTextContent.text(textContent1);
+          } else {
+            $sceneTextTitle.text(textTitle2);
+            $sceneTextContent.text(textContent2);
+          }
+        }
+      })
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -432,6 +457,17 @@ jQuery(document).ready(function($)
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
       .offset(step * 17) //tip top
+      .on('start end', function (e) {
+        if (e.type == 'end') {
+          if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextTitle.text(textTitle2);
+            $sceneTextContent.text(textContent2);
+          } else {
+            $sceneTextTitle.text(textTitle3);
+            $sceneTextContent.text(textContent3);
+          }
+        }
+      })
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -511,6 +547,17 @@ jQuery(document).ready(function($)
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
       .offset(step * 22) //tip top
+      .on('start end', function (e) {
+        if (e.type == 'end') {
+          if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextTitle.text(textTitle3);
+            $sceneTextContent.text(textContent3);
+          } else {
+            $sceneTextTitle.text(textTitle4);
+            $sceneTextContent.text(textContent4);
+          }
+        }
+      })
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -589,6 +636,17 @@ jQuery(document).ready(function($)
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
       .offset(step * 27) //tip top
+      .on('start end', function (e) {
+        if (e.type == 'end') {
+          if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextTitle.text(textTitle4);
+            $sceneTextContent.text(textContent4);
+          } else {
+            $sceneTextTitle.text(textTitle5);
+            $sceneTextContent.text(textContent5);
+          }
+        }
+      })
       .addTo(controller);
 
     new ScrollMagic.Scene({

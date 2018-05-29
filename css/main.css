@@ -622,9 +622,6 @@ header {
       object-fit: cover;
       top: 0;
       width: 100%; }
-      @media (max-width: 1200px) {
-        header .video-wrapper video {
-          display: none; } }
   header .smil-wrapper {
     width: 100%;
     height: 100%;
@@ -1269,6 +1266,8 @@ section .video-wrapper {
   width: 100%;
   max-width: 1120px;
   margin: auto; }
+  section .video-wrapper.entete-video-wrapper {
+    max-width: 100%; }
   section .video-wrapper .trigger {
     opacity: 0;
     position: absolute;
@@ -1300,7 +1299,18 @@ section.scene {
     position: relative;
     padding-bottom: 35px;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    transition: all 0.3s; }
+    @media (max-width: 992px) {
+      section.scene .layout {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 3px; } }
+    @media (max-width: 768px) {
+      section.scene .layout {
+        top: 0;
+        transform: translateY(0);
+        height: 100%; } }
     section.scene .layout .scene-progress {
       position: absolute;
       bottom: 0px;
@@ -1309,9 +1319,30 @@ section.scene {
       width: 0;
       height: 5px;
       background: #f3f3f3; }
+  @media (max-width: 992px) {
+    section.scene .scene-figure {
+      width: 49% !important;
+      float: left !important;
+      margin-right: 2% !important; } }
+  @media (max-width: 768px) {
+    section.scene .scene-figure {
+      width: 100% !important;
+      margin-right: 0 !important;
+      margin-bottom: 3px !important; } }
   section.scene .scene-text {
     padding: 0 15px;
+    transition: all 0.3s;
     margin-right: 0 !important; }
+    @media (max-width: 992px) {
+      section.scene .scene-text {
+        width: 49% !important;
+        float: left !important;
+        margin-right: 0 !important; } }
+    @media (max-width: 768px) {
+      section.scene .scene-text {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 3px !important; } }
     section.scene .scene-text .scene-text-bullet {
       background: #C0656D;
       color: white;
@@ -1322,6 +1353,9 @@ section.scene {
       margin-right: 15px; }
   section.scene .inter-titre {
     text-align: center; }
+    @media (max-width: 768px) {
+      section.scene .inter-titre {
+        margin: 20px 0 0px 0; } }
   section.scene p {
     text-align: center; }
 

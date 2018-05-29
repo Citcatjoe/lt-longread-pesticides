@@ -15,7 +15,7 @@ jQuery(document).ready(function($)
 	}
 
 	// ANIMATION D'INTRODUCTION AVEC GSAP. PREND EN COMPTE LA LARGEUR POUR RACCOURCIR SI MOBILE
-	var $introDone = true;
+	var $introDone = false;
 	var $hVideoWrapper = $('header .video-wrapper'),
 		$overlay = $('.overlay'),
 		$logoLt = $('.overlay .logo-lt-blanc, .overlay .logo-sponsor'),
@@ -28,7 +28,7 @@ jQuery(document).ready(function($)
 		$scrollIndicator = $('.scroll-indicator'),
 		tlIntroduction;
 
-	tlIntroduction =  new TimelineMax({ paused: true });
+	tlIntroduction =  new TimelineMax({ paused: false });
 
 	tlIntroduction
 		.set([$scrollIndicator], {yPercent: '105'})
