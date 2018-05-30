@@ -8,7 +8,7 @@ $twitter:#00aced;
 $facebook:#3d5a98;       
 
 $red-lt: #b80021;
-$red-lt-darker: #0e3579;  
+$red-lt-darker: #93b871;  
 
 $gray: #323232;   
 $odd-color: #f7f7f7; 
@@ -87,13 +87,13 @@ hr { background: $red-lt-darker; height: 4px !important; width: 150px; border-ra
 
 h1
 {
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 100px;
+    line-height: 110px;
     color: #fff;
     //font-family: $font1; 
-    font-family: $font3;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-family: $font1;
+    //text-transform: uppercase;
+    font-weight: 400;
     text-align: center;
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
@@ -278,11 +278,11 @@ h3
 h4
 {
     font-size: 16px; //16
-    line-height: 34px;
+    line-height: 28px;
     margin:0 0 34px 0;
     color: lighten($gray, 50%);
     font-family: $font2;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     font-weight: 700; 
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale; 
@@ -330,7 +330,8 @@ p
 {
     font-size:17px;
     line-height: 34px;
-    color: $black;
+    //color: $black;
+    color: #4e4e4e;
     font-family: $font2;
     font-weight: 400; 
     margin-bottom: 34px;

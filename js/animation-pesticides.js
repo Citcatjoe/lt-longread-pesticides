@@ -69,9 +69,9 @@ jQuery(document).ready(function($)
     // init controller
     var controller = new ScrollMagic.Controller();
     var step = 1000;
-    var textTitle0 = "Title 0";
+    var textTitle0 = "Un titre suffisemment long";
     var textContent0 = "Content 0";
-    var textTitle1 = "Title 1";
+    var textTitle1 = "Ici également un titre qui est plutot long";
     var textContent1 = "Content 1";
     var textTitle2 = "Title 2";
     var textContent2 = "Content 2";
@@ -92,13 +92,31 @@ jQuery(document).ready(function($)
         .offset( 0 ) 
         .addTo(controller);
 
-    // build scene
+    // progress control
 	new ScrollMagic.Scene({
         triggerElement: "section.scene",
         triggerHook: 0,
         duration: 34000
     })
         .setTween($sceneProgress, { width: "100%", backgroundColor: "#a5d080", ease: Power0.easeNone })
+        .offset(0) //tip top
+        .addTo(controller);
+
+  // hack to remove white space under footer
+  var whiteSpaceRemoved = false;
+	new ScrollMagic.Scene({
+        triggerElement: "footer",
+        triggerHook: 0.5,
+        duration: 100
+    })
+        .on('enter', function (e) {
+          if(whiteSpaceRemoved == false)
+          {
+            $('footer').nextAll('div').css('display', 'none');
+            whiteSpaceRemoved = true;
+          }
+        })
+        //.addIndicators()
         .offset(0) //tip top
         .addTo(controller);
 
@@ -271,9 +289,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
           if (e.type == 'end') {
               if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+                mainTl.set($sceneTextBullet, { scale: 0 });
                 $sceneTextTitle.text(textTitle0);
                 $sceneTextContent.text(textContent0);
               }else{
+                mainTl.set($sceneTextBullet, { scale: 0.5 });
                 $sceneTextTitle.text(textTitle1);
                 $sceneTextContent.text(textContent1);
               }
@@ -288,7 +308,7 @@ jQuery(document).ready(function($)
     })
       .setTween($sceneTextContent, { autoAlpha: 0, ease: Power0.easeNone })
       .offset(step * 7) //tip top
-      .addIndicators()
+      //.addIndicators()
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -316,6 +336,16 @@ jQuery(document).ready(function($)
        .setTween($sceneBullet1, { scale: 1, ease: Back.easeOut.config(2) })
        .offset(step*8) //tip top
        .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: "section.scene",
+      triggerHook: 0,
+      duration: step
+    })
+      .setTween($sceneTextBullet, { autoAlpha: 1, ease: Power0.easeNone })
+      .offset(step * 8) //tip top
+      //.addIndicators()
+      .addTo(controller);
 
     new ScrollMagic.Scene({
       triggerElement: "section.scene",
@@ -373,9 +403,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextBullet.text('1');
             $sceneTextTitle.text(textTitle1);
             $sceneTextContent.text(textContent1);
           } else {
+            $sceneTextBullet.text('2');
             $sceneTextTitle.text(textTitle2);
             $sceneTextContent.text(textContent2);
           }
@@ -460,9 +492,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextBullet.text('2');
             $sceneTextTitle.text(textTitle2);
             $sceneTextContent.text(textContent2);
           } else {
+            $sceneTextBullet.text('3');
             $sceneTextTitle.text(textTitle3);
             $sceneTextContent.text(textContent3);
           }
@@ -550,9 +584,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextBullet.text('3');
             $sceneTextTitle.text(textTitle3);
             $sceneTextContent.text(textContent3);
           } else {
+            $sceneTextBullet.text('4');
             $sceneTextTitle.text(textTitle4);
             $sceneTextContent.text(textContent4);
           }
@@ -639,9 +675,11 @@ jQuery(document).ready(function($)
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
+            $sceneTextBullet.text('4');
             $sceneTextTitle.text(textTitle4);
             $sceneTextContent.text(textContent4);
           } else {
+            $sceneTextBullet.text('5');
             $sceneTextTitle.text(textTitle5);
             $sceneTextContent.text(textContent5);
           }
