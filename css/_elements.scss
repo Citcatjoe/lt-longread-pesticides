@@ -243,6 +243,7 @@ section.scene
     //background: red;
     height: 100vh;
 
+  
    .layout
    {
        position: relative;
@@ -261,7 +262,7 @@ section.scene
             top: 0;
             transform: translateY(0);
             height: 95%;
-            // overflow: hidden;
+           overflow-y: hidden !important;
         }
 
        .scene-progress
@@ -270,9 +271,13 @@ section.scene
            bottom: 0px;
            left: 50%;
            transform: translateX(-50%);
-           width: 0;
-           height: 5px;
-           background: #f3f3f3;
+           width: 50px;
+           height: 20px;
+           text-align: center;
+           color: #b5b5b5;
+           font-family: Oswald;
+           font-style:italic;
+           //background: #f3f3f3;
 
         //    @include breakpoint(sm) { 
         //         bottom: auto;
@@ -323,6 +328,7 @@ section.scene
             margin-right: 0 !important;
             margin-bottom: 3px !important;
         }
+        
 
         .scene-text-bullet 
         {
@@ -348,13 +354,24 @@ section.scene
 
         @include breakpoint(sm) { 
             margin: 20px 0 0px 0;
-            padding: 0 50px;
+            padding: 0 20px;
+        }
+
+         @include breakpoint(xxs) { 
+            font-size: 18px;
+            line-height: 22px;
+             margin: 10px 0 10px 0;
         }
     }
 
     p 
     {
         text-align: center;
+
+        @include breakpoint(xxs) { 
+            font-size: 13px;
+            line-height: 23px;
+        }
     }
 }
   
@@ -366,7 +383,12 @@ section.scene
 		  left: 0; 
 		  margin: auto;
 		  width :34px;
-		  height: 55px;
+          height: 55px;
+          
+          @include breakpoint(sm) { 
+                    transform: scale(0.75);
+                    margin-top: -15px;
+            }
 		}
 		.mousey {
 		  width: 3px;

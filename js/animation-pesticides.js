@@ -60,7 +60,8 @@ jQuery(document).ready(function($)
             .set($sceneBullet3, { autoAlpha: 1, scale: 0, transformOrigin: "center center" })
             .set($sceneBullet4, { autoAlpha: 1, scale: 0, transformOrigin: "center center" })
             .set($sceneBullet5, { autoAlpha: 1, scale: 0, transformOrigin: "center center" })
-            .set($sceneTextBullet, { autoAlpha: 0, marginLeft: -50, scale: 0, transformOrigin: "center center" });
+            .set($sceneTextBullet, { autoAlpha: 0, marginLeft: -50, scale: 0, transformOrigin: "center center" })
+            .set($sceneProgress, { autoAlpha: 0, transformOrigin: "center center" });
 			
 
 		return clearTl;
@@ -69,24 +70,24 @@ jQuery(document).ready(function($)
     // init controller
     var controller = new ScrollMagic.Controller();
     var step = 1000;
-    var textTitle0 = "Un titre suffisemment long";
-    var textContent0 = "Content 0";
-    var textTitle1 = "Ici également un titre qui est plutot long";
-    var textContent1 = "Content 1";
-    var textTitle2 = "Title 2";
-    var textContent2 = "Content 2";
-    var textTitle3 = "Title 3";
-    var textContent3 = "Content 3";
-    var textTitle4 = "Title 4";
-    var textContent4 = "Content 4";
-    var textTitle5 = "Title 5";
-    var textContent5 = "Content 5";
+    var textTitle0 = "Comment les pesticides se répendent-ils dans la nature?";
+    var textContent0 = "Les pesticides sont le plus souvent pulvérisés sous forme liquide sur les plantes et le sol mais peuvent aussi être incorporés directement au sol sous forme de granulés. Lors de l’épandage et après, ces produits gagnent le sol, l’air et les eaux par différents canaux.";
+    var textTitle1 = "Dans l’atmosphère";
+    var textContent1 = "Une partie des matières actives s’évapore et gagne l’atmosphère. Elles peuvent ensuite regagner le sol lors de précipitations.";
+    var textTitle2 = "Dans l'air";
+    var textContent2 = "Lors de l’épandage, et en particulier lorsqu’il y a du vent, certaines substances dérivent et parcourent de courtes à moyennes distances en suspension dans l’air.";
+    var textTitle3 = "Dans les cours d'eau";
+    var textContent3 = "Une proportion significative des substances phytosanitaires ruisselle le long des pentes et aboutit dans les cours d’eau.";
+    var textTitle4 = "Dans les sols";
+    var textContent4 = "Les pesticides qui atteignent le sol y sont en partie dégradés par les microorganismes, ce qui peut donner lieu à des sous-produits plus ou moins toxiques.";
+    var textTitle5 = " Dans les nappes d’eau souterraines";
+    var textContent5 = "À plus long terme, les pesticides ou leurs sous-produits sont lessivés à travers le sol et gagnent les nappes d’eau souterraines.";
     
     // build scene
 	new ScrollMagic.Scene({
         triggerElement: 'section.scene', 
         triggerHook: 0,
-        duration: 34000
+        duration: 17000
     })
         .setPin('section.scene', {pushFollowers: true})
         .offset( 0 ) 
@@ -96,10 +97,14 @@ jQuery(document).ready(function($)
 	new ScrollMagic.Scene({
         triggerElement: "section.scene",
         triggerHook: 0,
-        duration: 34000
+        duration: 17000
     })
-        .setTween($sceneProgress, { width: "100%", backgroundColor: "#a5d080", ease: Power0.easeNone })
-        .offset(0) //tip top
+        //.setTween($sceneProgress, { width: "100%", backgroundColor: "#a5d080", ease: Power0.easeNone })
+        .offset(0) //tip top$
+        .on("progress", function(e) {
+          $sceneProgress.text(Math.ceil((e.progress.toFixed(3)) * 100) + "%");
+          //console.log(      Math.ceil((e.progress.toFixed(3))*100) + "%"    )
+        })
         .addTo(controller);
 
   // hack to remove white space under footer
@@ -323,6 +328,18 @@ jQuery(document).ready(function($)
       })
       .addTo(controller);
 
+    new ScrollMagic.Scene({
+      triggerElement: "section.scene",
+      triggerHook: 0,
+      duration: step
+    })
+      .setTween($sceneProgress, { autoAlpha: 1, ease: Power0.easeNone })
+      .offset(step * 7) //tip top
+      .on('enter leave', function (e) {
+        console.log(e.type);
+      })
+      .addTo(controller);
+
   
 
 
@@ -390,7 +407,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneFleche2, { autoAlpha: 1, ease: Power0.easeNone })
-       .offset(step*12) //tip top
+       .offset(step*9) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -399,7 +416,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 12) //tip top
+      .offset(step * 9) //tip top
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
@@ -421,7 +438,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 12) //tip top
+      .offset(step * 9) //tip top
       .addTo(controller);
 
 
@@ -435,7 +452,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneBullet2, { scale: 1, ease: Back.easeOut.config(2) })
-       .offset(step * 13) //tip top
+       .offset(step * 10) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -444,7 +461,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 13) //tip top
+      .offset(step * 10) //tip top
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -453,7 +470,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 13) //tip top
+      .offset(step * 10) //tip top
       .addTo(controller);
 
 
@@ -464,7 +481,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneFleche2, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 14) //tip top
+      .offset(step * 11) //tip top
       .addTo(controller);
 
 
@@ -479,7 +496,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneFleche3, { autoAlpha: 1, ease: Power0.easeNone })
-       .offset(step * 17) //tip top
+       .offset(step * 11) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -488,7 +505,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 17) //tip top
+      .offset(step * 11) //tip top
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
@@ -510,7 +527,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 17) //tip top
+      .offset(step * 11) //tip top
       .addTo(controller);
 
 
@@ -524,7 +541,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneBullet3, { scale: 1, ease: Back.easeOut.config(2) })
-       .offset(step * 18) //tip top
+       .offset(step * 12) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -533,7 +550,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 18) //tip top
+      .offset(step * 12) //tip top
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -542,7 +559,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 18) //tip top
+      .offset(step * 12) //tip top
       .addTo(controller);
 
 
@@ -554,7 +571,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneFleche3, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 19) //tip top
+      .offset(step * 13) //tip top
       .addTo(controller);
 
 
@@ -571,7 +588,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneFleche4, { autoAlpha: 1, ease: Power0.easeNone })
-       .offset(step * 22) //tip top
+       .offset(step * 13) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -580,7 +597,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 22) //tip top
+      .offset(step * 13) //tip top
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
@@ -602,7 +619,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 22) //tip top
+      .offset(step * 13) //tip top
       .addTo(controller);
 
 
@@ -616,7 +633,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneBullet4, { scale: 1, ease: Back.easeOut.config(2) })
-       .offset(step * 23) //tip top
+       .offset(step * 14) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -625,7 +642,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 23) //tip top
+      .offset(step * 14) //tip top
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -634,7 +651,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 23) //tip top
+      .offset(step * 14) //tip top
       .addTo(controller);
 
 
@@ -646,7 +663,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneFleche4, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 24) //tip top
+      .offset(step * 15) //tip top
       .addTo(controller);
 
 
@@ -662,7 +679,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneFleche5, { autoAlpha: 1, ease: Power0.easeNone })
-       .offset(step * 27) //tip top
+       .offset(step * 15) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -671,7 +688,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 27) //tip top
+      .offset(step * 15) //tip top
       .on('start end', function (e) {
         if (e.type == 'end') {
           if (e.target.controller().info('scrollDirection') === 'REVERSE') {
@@ -693,7 +710,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 27) //tip top
+      .offset(step * 15) //tip top
       .addTo(controller);
 
 
@@ -707,7 +724,7 @@ jQuery(document).ready(function($)
        duration: step
     })
        .setTween($sceneBullet5, { scale: 1, ease: Back.easeOut.config(2) })
-       .offset(step * 28) //tip top
+       .offset(step * 16) //tip top
        .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -716,7 +733,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextTitle, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 28) //tip top
+      .offset(step * 16) //tip top
       .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -725,7 +742,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneTextContent, { autoAlpha: 1, ease: Power0.easeNone })
-      .offset(step * 28) //tip top
+      .offset(step * 16) //tip top
       .addTo(controller);
 
 
@@ -737,7 +754,7 @@ jQuery(document).ready(function($)
       duration: step
     })
       .setTween($sceneFleche5, { autoAlpha: 0, ease: Power0.easeNone })
-      .offset(step * 29) //tip top
+      .offset(step * 17) //tip top
       .addTo(controller);
 
 
