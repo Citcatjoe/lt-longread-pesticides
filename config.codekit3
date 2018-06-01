@@ -1526,16 +1526,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/img\/article\/chart2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/img\/article\/chart2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/img\/article\/chart3.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1565,6 +1555,49 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/article\/map-suisse.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/article\/map-suisse.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/article\/portrait-chevre.jpg": {
+		"ft": 16384,
+		"iS": 244614,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/article\/portrait-chevre.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/article\/portrait-cornamusaz.jpg": {
+		"ft": 16384,
+		"iS": 448326,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/article\/portrait-cornamusaz.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/article\/portrait-lebleu.jpg": {
+		"ft": 16384,
+		"iS": 416641,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/article\/portrait-lebleu.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/article\/poster1.jpg": {
@@ -1912,11 +1945,11 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/indexLT.php": {
+	"\/indexH.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/indexLT.php",
+		"oAP": "\/indexH.php",
 		"oF": 0
 		},
 	"\/js\/animation-charts-min.js": {
@@ -2858,6 +2891,13 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"\/prod\/LT_WEB_PESTICIDES_CARTE.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prod\/LT_WEB_PESTICIDES_CARTE.ai",
+		"oF": 0
 		},
 	"\/prod\/LT_WEB_PESTICIDES_DONUT.ai": {
 		"cB": 0,
