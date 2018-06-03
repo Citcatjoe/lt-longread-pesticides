@@ -1945,11 +1945,11 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/indexH.php": {
+	"\/indexLT.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/indexH.php",
+		"oAP": "\/indexLT.php",
 		"oF": 0
 		},
 	"\/js\/animation-charts-min.js": {

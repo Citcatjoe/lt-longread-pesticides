@@ -6,7 +6,7 @@ jQuery(document).ready(function($)
     $chart1Herbes = $chart1.find('#herbicide_x5F_leg'),
     $chart1Insectes = $chart1.find('#insecticide_x5F_leg'),
     $chart1Slurps = $chart1.find('#molluscicide_x5F_leg'),
-    $chart1Plantes = $chart1.find('#regulateur_x5F_leg'),
+    $chart1Plantes = $chart1.find('#regulateur_x5F_leg'), 
     $chart1Rats = $chart1.find('#autre_x5F_leg');
     
     clearChart1();
@@ -42,12 +42,14 @@ jQuery(document).ready(function($)
     .addTo(chartController);
 
   chart1Tl
-    .to($chart1Champis, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
-    .to($chart1Herbes, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
-    .to($chart1Insectes, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
-    .to($chart1Slurps, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
-    .to($chart1Plantes, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
-    .to($chart1Rats, 0.7, { autoAlpha: 1, ease: Power4.easeOut });
+    .to($chart1Champis, 1, { autoAlpha: 1, ease: Power4.easeOut })
+    .to($chart1Herbes, 1, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.8")
+    .to($chart1Insectes, 1, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.8")
+    .to($chart1Slurps, 1, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.8")
+    .to($chart1Plantes, 1, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.8")
+    .to($chart1Rats, 1, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.8");
+
+
 
   //-----------------------------------------------------------------------------
    //-----------------------------------------------------------------------------
@@ -199,34 +201,34 @@ jQuery(document).ready(function($)
     .on('enter', function (e) {
       chart4Tl.play();
     })
-    .addIndicators()
+    //.addIndicators()
     .addTo(chartController);
 
   chart4Tl
     .to($chart4Picto1, 1.2, { y: "-=55px", ease: Back.easeOut.config(2) })
     .to($chart4Ombre1, 1.2, { autoAlpha: 0, scale: 0, ease: Power4.easeOut }, "-=1.2")
-    .to($chart4Baril1, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.2")
-    .to($chart4Leg1, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
+    .to($chart4Baril1, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.4")
+    .to($chart4Leg1, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.7")
     
-    .to($chart4Picto2, 1.2, { y: "-=62px", ease: Back.easeOut.config(3) })
+    .to($chart4Picto2, 1.2, { y: "-=62px", ease: Back.easeOut.config(3) }, "-=1.1")
     .to($chart4Ombre2, 1.2, { autoAlpha: 0, scale: 0, ease: Power4.easeOut }, "-=1.2")
-    .to($chart4Baril2, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.2")
-    .to($chart4Leg2, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
+    .to($chart4Baril2, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.4")
+    .to($chart4Leg2, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.7")
     
-    .to($chart4Picto3, 1.2, { y: "-=85px", ease: Back.easeOut.config(4) })
+    .to($chart4Picto3, 1.2, { y: "-=85px", ease: Back.easeOut.config(4) }, "-=1.1")
     .to($chart4Ombre3, 1.2, { autoAlpha: 0, scale: 0, ease: Power4.easeOut }, "-=1.2")
-    .to($chart4Baril3, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.2")
-    .to($chart4Leg3, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
+    .to($chart4Baril3, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.4")
+    .to($chart4Leg3, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.7")
     
-    .to($chart4Picto4, 1.2, { y: "-=115px", ease: Back.easeOut.config(5) })
+    .to($chart4Picto4, 1.2, { y: "-=115px", ease: Back.easeOut.config(5) }, "-=1.1")
     .to($chart4Ombre4, 1.2, { autoAlpha: 0, scale: 0, ease: Power4.easeOut }, "-=1.2")
-    .to($chart4Baril4, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.2")
-    .to($chart4Leg4, 0.7, { autoAlpha: 1, ease: Power4.easeOut })
+    .to($chart4Baril4, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.4")
+    .to($chart4Leg4, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.7")
     
-    .to($chart4Picto5, 1.2, { y: "-=135px", ease: Back.easeOut.config(6) })
+    .to($chart4Picto5, 1.2, { y: "-=135px", ease: Back.easeOut.config(6) }, "-=1.1")
     .to($chart4Ombre5, 1.2, { autoAlpha: 0, scale: 0, ease: Power4.easeOut }, "-=1.2")
-    .to($chart4Baril5, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.2")
-    .to($chart4Leg5, 0.7, { autoAlpha: 1, ease: Power4.easeOut });
+    .to($chart4Baril5, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.4")
+    .to($chart4Leg5, 0.7, { autoAlpha: 1, ease: Power4.easeOut }, "-=0.7");
     
 
     
