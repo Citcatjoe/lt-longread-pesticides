@@ -594,7 +594,7 @@ header {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
-    opacity: 0.65;
+    opacity: 0.5;
     z-index: 5; }
   header .video-wrapper {
     -webkit-transition: all, 1s;
