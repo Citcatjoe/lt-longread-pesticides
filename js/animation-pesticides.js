@@ -70,7 +70,7 @@ jQuery(document).ready(function($)
     // init controller
     var controller = new ScrollMagic.Controller();
     var step = 1000;
-    var textTitle0 = "Comment les pesticides se répendent-ils dans la nature?";
+    var textTitle0 = "Comment les pesticides se répandent-ils dans la nature?";
     var textContent0 = "Les pesticides sont le plus souvent pulvérisés sous forme liquide sur les plantes et le sol mais peuvent aussi être incorporés directement au sol sous forme de granulés. Lors de l’épandage et après, ces produits gagnent le sol, l’air et les eaux par différents canaux.";
     var textTitle1 = "Dans l’atmosphère";
     var textContent1 = "Une partie des matières actives s’évapore et gagne l’atmosphère. Elles peuvent ensuite regagner le sol lors de précipitations.";
