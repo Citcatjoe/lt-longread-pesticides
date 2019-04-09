@@ -1,4 +1,6 @@
 {% use '_blocks.html.twig' %}
+{% use '_contrib.html.twig' %}
+{{ block('contrib_bloc') }}
 
 <!DOCTYPE HTML>
 
@@ -171,13 +173,13 @@
 			</svg>
 		</div> -->
 		
-		<!-- <div class="overlay">
+		<div class="overlay">
 			<img class="logo-lt-blanc" src="img/logo-lt-blanc.svg" alt="">
 			<div class="spinner">
 				<div class="double-bounce1"></div>
 				<div class="double-bounce2"></div>
 			</div>
-		</div> -->
+		</div>
 
 		<header>
 			<div class="header__bg"></div>
@@ -4036,85 +4038,23 @@
 		</section>
 
 		
-		<section class="contribution padding-bottom">
-			<div class="container">
-
-				<svg class="brand-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 viewBox="0 0 151.9 151.9" style="enable-background:new 0 0 151.9 151.9;" xml:space="preserve">
-				<style type="text/css">
-					.st0{fill:#940026;}
-					.st1{fill:#FFFFFF;}
-				</style>
-				<g id="fav-bg">
-					<rect x="0.1" y="0.4" class="st0" width="152.1" height="152.1"/>
-				</g>
-				<g id="fav-glyph">
-					<path id="Fill-4_2_" class="st1" d="M127.4,49.8h-1.5c-2-7.2-11.9-25.7-19-26.7c-3.8-0.5-8.5-0.7-12.6-0.7h-7.2v98.4
-						c0,3.6,1.3,6.5,5.1,8.2c2,0.8,10.3,2,13.3,2.1v1.2H47v-1.2c2.9-0.2,11.1-1,13.3-1.8c3.9-1.5,5.1-4.6,5.1-8.2V22.5h-7
-						c-3.8,0-9,0.2-12.6,0.7c-7,1-17.2,19.5-19.1,26.7h-1.5V20.5h102.3L127.4,49.8"/>
-				</g>
-				</svg>
-
-				<h3 class="inter-titre">Vous aimez nos longs formats?</h3> 
-				
-				<p>
-					Le Temps met tout son cœur pour réaliser des contenus interactifs et immersifs, que vous pouvez retrouver sur tous vos supports. Journalistes, photographes, vidéastes, graphistes et développeurs collaborent étroitement pendant plusieurs semaines ou mois pour vous proposer des longs formats comme celui-ci, qui répondent à une grande exigence éditoriale.
-				</p>
-
-				<p>
-                   Leur réalisation prend du temps et des ressources considérables. Nous sommes cependant persuadés que ces investissements en valent la peine, et avons fait le choix de laisser ces contenus en libre accès et dépourvus de publicité. Un choix rendu possible par le soutien de nos fidèles et nouveaux lecteurs.
-                </p>
-
-                <p>
-                    Pour continuer à travailler en totale indépendance éditoriale et produire des contenus interactifs, Le Temps compte sur vous. Si vous souhaitez nous soutenir, souscrivez dès maintenant un abonnement (offre mensuelle dès CHF 9.-). <!-- Vous pouvez également reverser un don supplémentaire qui sera exclusivement utilisé pour la réalisation de nos longs formats. -->
-                </p>
-
-                <div class="calltoaction">
-                	<a href="https://boutique.letemps.ch/abonnements" target="_blank"><button>Je m'abonne</button></a>
-                	<br>
-               		<!-- <img src="img/article/cards-icons-longreads.svg" alt="" class="cards-icons">
-               		-->
-               		<svg class="cards-icons" width="136px" height="30px" viewBox="0 0 136 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-					    <title>Artboard</title>
-					    <desc>Created with Sketch.</desc>
-					    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					        <g id="icons8-visa" fill-rule="nonzero">
-					            <path d="M42,26 C42,28.210938 40.210938,30 38,30 L4,30 C1.789063,30 0,28.210938 0,26 L0,4 C0,1.789063 1.789063,0 4,0 L38,0 C40.210938,0 42,1.789063 42,4 L42,26 Z" id="Path" fill="#1565C0"></path>
-					            <path d="M12.1875,10 L9.558594,17.832031 C9.558594,17.832031 8.894531,14.519531 8.828125,14.101563 C7.332031,10.691406 5.125,10.882813 5.125,10.882813 L7.726563,21 L7.726563,20.996094 L10.886719,20.996094 L15.257813,10 L12.1875,10 Z" id="Path" fill="#FFFFFF"></path>
-					            <polygon id="Path" fill="#FFFFFF" points="14.6875 21 17.558594 21 19.296875 10 16.390625 10"></polygon>
-					            <path d="M35.007813,10 L31.988281,10 L27.277344,21 L30.128906,21 L30.71875,19.429688 L34.3125,19.429688 L34.617188,21 L37.230469,21 L35.007813,10 Z M31.511719,17.328125 L33.074219,13.171875 L33.894531,17.328125 L31.511719,17.328125 Z" id="Shape" fill="#FFFFFF"></path>
-					            <path d="M23.367188,13.207031 C23.367188,12.601563 23.867188,12.148438 25.296875,12.148438 C26.222656,12.148438 27.285156,12.824219 27.285156,12.824219 L27.753906,10.515625 C27.753906,10.515625 26.394531,10 25.0625,10 C22.042969,10 20.484375,11.441406 20.484375,13.269531 C20.484375,16.578125 24.464844,16.125 24.464844,17.820313 C24.464844,18.113281 24.234375,18.785156 22.574219,18.785156 C20.914063,18.785156 19.816406,18.175781 19.816406,18.175781 L19.320313,20.394531 C19.320313,20.394531 20.386719,21 22.4375,21 C24.496094,21 27.355469,19.460938 27.355469,17.246094 C27.355469,14.585938 23.367188,14.394531 23.367188,13.207031 Z" id="Path" fill="#FFFFFF"></path>
-					            <path d="M9.210938,15.945313 L8.246094,11.195313 C8.246094,11.195313 7.808594,10.167969 6.671875,10.167969 C5.535156,10.167969 2.234375,10.167969 2.234375,10.167969 C2.234375,10.167969 7.894531,11.839844 9.210938,15.945313 Z" id="Path" fill="#FFC107"></path>
-					        </g>
-					        <g id="icons8-mastercard" transform="translate(47.000000, 0.000000)" fill-rule="nonzero">
-					            <path d="M42,26 C42,28.210938 40.210938,30 38,30 L4,30 C1.789063,30 0,28.210938 0,26 L0,4 C0,1.789063 1.789063,0 4,0 L38,0 C40.210938,0 42,1.789063 42,4 L42,26 Z" id="Path" fill="#3F51B5"></path>
-					            <path d="M37,15 C37,20.523438 32.523438,25 27,25 C21.476563,25 17,20.523438 17,15 C17,9.476563 21.476563,5 27,5 C32.523438,5 37,9.476563 37,15 Z" id="Path" fill="#FFC107"></path>
-					            <path d="M19.015625,21 C18.550781,20.382813 18.152344,19.714844 17.839844,19 L23.164063,19 C23.441406,18.363281 23.660156,17.695313 23.800781,17 L17.203125,17 C17.070313,16.355469 17,15.6875 17,15 L24,15 C24,14.3125 23.929688,13.644531 23.800781,13 L17.199219,13 C17.34375,12.304688 17.558594,11.636719 17.839844,11 L23.164063,11 C22.851563,10.285156 22.453125,9.617188 21.988281,9 L19.015625,9 C19.449219,8.421875 19.945313,7.878906 20.496094,7.40625 C18.746094,5.910156 16.480469,5 14,5 C8.476563,5 4,9.476563 4,15 C4,20.523438 8.476563,25 14,25 C17.269531,25 20.160156,23.425781 21.984375,21 L19.015625,21 Z" id="Path" fill="#FF3D00"></path>
-					        </g>
-					        <g id="icons8-american-express-(1)" transform="translate(94.000000, 0.000000)" fill-rule="nonzero">
-					            <path d="M42,26 C42,28.210938 40.210938,30 38,30 L4,30 C1.789063,30 0,28.210938 0,26 L0,4 C0,1.789063 1.789063,0 4,0 L38,0 C40.210938,0 42,1.789063 42,4 L42,26 Z" id="Path" fill="#1976D2"></path>
-					            <path d="M19.253906,11 L17.140625,15.683594 L15.039063,11 L12.34375,11 L12.34375,17.726563 L9.339844,11 L7.066406,11 L4,17.980469 L5.816406,17.980469 L6.484375,16.421875 L9.917969,16.421875 L10.601563,17.980469 L14.066406,17.980469 L14.066406,12.796875 L16.363281,17.980469 L17.925781,17.980469 L20.277344,12.886719 L20.277344,17.980469 L22,17.980469 L22,11 L19.253906,11 Z M7.136719,14.914063 L8.160156,12.476563 L9.226563,14.914063 L7.136719,14.914063 Z" id="Shape" fill="#FFFFFF"></path>
-					            <path d="M34.882813,14.414063 L38,11.019531 L35.78125,11.019531 L33.789063,13.183594 L31.859375,11 L25,11 L25,17.980469 L31.636719,17.980469 L33.726563,15.671875 L35.765625,18 L37.976563,18 L34.882813,14.414063 Z M30.726563,16.515625 L26.71875,16.515625 L26.71875,15.136719 L30.554688,15.136719 L30.554688,13.8125 L26.71875,13.8125 L26.71875,12.503906 L30.949219,12.515625 L32.644531,14.414063 L30.726563,16.515625 Z" id="Shape" fill="#FFFFFF"></path>
-					        </g>
-					    </g>
-					</svg>
-                </div>
-
-                
-
-                <p>
-                	Nous espérons vous compter encore longtemps parmi nos lecteurs.
-                </p>
-
-			</div>
-		</section>
+		
 	
 
 		
+		<section class="video">
+			<div class="video-wrapper entete-video-wrapper">
+				<div class="trigger"></div>
+				<!-- <img src="img/poster-piste.jpg" alt=""> -->
+				<video playsinline autoplay loop muted poster="img/article/posterfleurs.jpg">
+					<source src="https://player.vimeo.com/external/272224621.hd.mp4?s=4a9a994bee142ecf115c65cebebe835003ccabcc&profile_id=175"
+					 type="video/mp4"> Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div>
+			<!-- <img src="img/test.gif" alt=""> -->
+		</section>
 		
-		
-        
+        {{ block('contrib_bloc') }}
         
 		
 		<footer>
